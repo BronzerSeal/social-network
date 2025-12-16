@@ -16,7 +16,7 @@ const NotFoundPage = () => {
           as={Link}
           color="primary"
           variant="shadow"
-          href={pageUrls.feedPage}
+          href={pageUrls.LoginPage}
         >
           Return to home
         </Button>

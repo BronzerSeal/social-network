@@ -50,9 +50,10 @@ model User {
   email         String?   @unique
   emailVerified DateTime? @map("email_verified")
   image         String?
-  provider      String // "credentials" | "google"
+  provider      String    @default("credentials") // "credentials" | "google"
   accounts      Account[]
   sessions      Session[]
+  resetTokens   ResetToken[]
 
   @@map("users")
 }
@@ -64,4 +65,16 @@ model VerificationToken {
 
   @@unique([identifier, token])
   @@map("verification_tokens")
+}
+
+model ResetToken {
+  id        String   @id @default(cuid())
+  token     String   @unique
+  user      User     @relation(fields: [userId], references: [id])
+  userId    String
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+
+  @@index([token])
+  @@index([expiresAt])
 }

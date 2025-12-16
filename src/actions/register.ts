@@ -12,6 +12,7 @@ type RegisterResult =
       password: string;
       emailVerified: Date | null;
       image: string | null;
+      provider: "credentials" | "google";
     }
   | { error: string };
 
@@ -43,6 +44,7 @@ export async function registerUser(
         email: email,
         password: pwHash,
         name: name,
+        provider: "credentials",
       },
     });
 

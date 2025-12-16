@@ -20,8 +20,6 @@ export async function middleware(request: NextRequest) {
 
   const token = await getToken(params);
 
-  console.log(token);
-
   const protectedRoutes = ["/feed"];
 
   if (

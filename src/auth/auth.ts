@@ -7,11 +7,16 @@ import { signInSchema } from "@/schema/zod";
 import prisma from "@/utils/prisma";
 import getUserFromDb from "@/utils/getUserFromDb";
 import Google from "next-auth/providers/google";
+import ResendProvider from "next-auth/providers/resend";
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
   adapter: PrismaAdapter(prisma),
   providers: [
     Google,
+    ResendProvider({
+      apiKey: process.env.RESEND_API_KEY,
+      from: "onboarding@resend.dev",
+    }),
     Credentials({
       name: "Account",
       credentials: {
@@ -64,16 +69,35 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       if (user) {
         token.id = user.id;
         token.email = user.email;
+
+        const dbUser = await prisma.user.findUnique({
+          where: { id: user.id },
+          select: { provider: true },
+        });
+
+        token.provider = dbUser?.provider;
       }
+
       return token;
     },
 
     async session({ session, token }) {
-      if (token) {
+      if (session.user && token) {
         session.user.id = token.id as string;
         session.user.email = token.email as string;
+        session.user.provider = token.provider as string;
       }
       return session;
+    },
+  },
+  events: {
+    async createUser({ user }) {
+      await prisma.user.update({
+        where: { id: user.id },
+        data: {
+          provider: "google",
+        },
+      });
     },
   },
 });

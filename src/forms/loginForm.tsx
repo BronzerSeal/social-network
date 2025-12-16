@@ -33,13 +33,18 @@ const LoginForm: FC<Props> = ({ changeForm }) => {
       formData.email,
       formData.password
     );
-    console.log(result);
 
     if (result && result.error) {
       if (result.error === "CredentialsSignin") {
         addToast({
           title: "Incorrect login or password",
           color: "danger",
+        });
+      } else if (result.error === "GOOGLE_ACCOUNT") {
+        addToast({
+          title:
+            "This email is registered with Google. Please use Google Sign-In.",
+          color: "warning",
         });
       } else {
         addToast({
