@@ -9,7 +9,7 @@ type RegisterResult =
       id: string;
       name: string | null;
       email: string | null;
-      password: string;
+      password: string | null;
       emailVerified: Date | null;
       image: string | null;
       provider: "credentials" | "google";
@@ -22,11 +22,11 @@ export async function registerUser(
   const { email, password, confirmPassword, name } = formData;
 
   if (password !== confirmPassword) {
-    return { error: "Пароли не совпадают" };
+    return { error: "The passwords don't match" };
   }
 
   if (password.length < 6) {
-    return { error: "Пароль должен быть не менее 6 символов" };
+    return { error: "The password must be at least 6 characters long." };
   }
 
   try {
@@ -35,7 +35,7 @@ export async function registerUser(
     });
 
     if (existingUser) {
-      return { error: "Пользователь с таким email уже существует" };
+      return { error: "A user with this email already exists." };
     }
 
     const pwHash = await saltAndHashPassword(password);
@@ -51,6 +51,6 @@ export async function registerUser(
     return user;
   } catch (error) {
     console.log(error);
-    return { error: "Ошибка регистрации" };
+    return { error: "Registration error" };
   }
 }

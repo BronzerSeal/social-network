@@ -43,6 +43,11 @@ model Session {
   @@map("sessions")
 }
 
+enum AuthProvider {
+  credentials
+  google
+}
+
 model User {
   id            String    @id @default(cuid())
   name          String?
@@ -50,7 +55,7 @@ model User {
   email         String?   @unique
   emailVerified DateTime? @map("email_verified")
   image         String?
-  provider      String    @default("credentials") // "credentials" | "google"
+  provider      AuthProvider    @default(credentials) // "credentials" | "google"
   accounts      Account[]
   sessions      Session[]
   resetTokens   ResetToken[]

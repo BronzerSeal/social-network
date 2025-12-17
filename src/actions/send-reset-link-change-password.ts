@@ -11,6 +11,15 @@ export async function sendResetLink(email: string) {
   const user = await prisma.user.findUnique({ where: { email } });
   if (!user) return;
 
+  if (user.provider !== "credentials") {
+    return {
+      success: false,
+      error:
+        "You created an account using Google, so you won't be able to use this page.",
+      code: 400,
+    };
+  }
+
   const token = crypto.randomBytes(32).toString("hex");
   const expiresAt = new Date(Date.now() + 1000 * 60 * 60); // 1 час
 
@@ -28,8 +37,6 @@ export async function sendResetLink(email: string) {
     from: "onboarding@resend.dev",
     to: email,
     subject: "Reset your password",
-    html: `<p>Click the link to reset your password:</p>
-       <a href="${resetUrl}">${resetUrl}</a>`,
-    // react: jsx(EmailForm, { resetUrl }),
+    react: jsx(EmailForm, { resetUrl }),
   });
 }

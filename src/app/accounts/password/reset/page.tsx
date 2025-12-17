@@ -13,23 +13,29 @@ import {
   Input,
 } from "@heroui/react";
 import { Link, Lock } from "lucide-react";
-import { useSession } from "next-auth/react";
 import { redirect } from "next/navigation";
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
 
 const ResetPasswordPage = () => {
-  const { data: session } = useSession();
-  console.log(session);
   const [email, setEmail] = useState("");
 
-  const submitNewPassword = async () => {
+  const submitNewPassword = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     try {
-      await sendResetLink(email);
+      const res = await sendResetLink(email);
+      if (res?.code === 400) {
+        addToast({
+          title: res.error,
+          color: "warning",
+        });
+      }
     } catch (error) {
-      addToast({
-        title: "Error sending email",
-        color: "danger",
-      });
+      if (error instanceof Error) {
+        addToast({
+          title: "Error sending email",
+          color: "danger",
+        });
+      }
     }
   };
 
@@ -51,6 +57,7 @@ const ResetPasswordPage = () => {
           >
             <Input
               placeholder="email"
+              type="email"
               radius="sm"
               value={email}
               onInput={(e: ChangeEvent<HTMLInputElement>) =>
@@ -63,7 +70,7 @@ const ResetPasswordPage = () => {
               type="submit"
               isDisabled={!email}
             >
-              send Email
+              Send email
             </Button>
           </form>
         </CardBody>

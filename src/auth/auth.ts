@@ -29,9 +29,8 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
             throw new Error("Email и пароль обязательны");
           }
 
-          const { email, password } = await signInSchema.parseAsync(
-            credentials
-          );
+          const { email, password } =
+            await signInSchema.parseAsync(credentials);
 
           const user = await getUserFromDb(email);
 
