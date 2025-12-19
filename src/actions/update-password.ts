@@ -1,6 +1,6 @@
 "use server";
 import prisma from "@/utils/prisma";
-import { saltAndHashPassword } from "@/utils/password";
+import { saltAndHashPassword } from "@/utils/auth/password";
 
 export async function updatePassword({
   token,

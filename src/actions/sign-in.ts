@@ -1,6 +1,6 @@
 "use client";
 
-import { isCreateByGoogle } from "@/utils/isCreateByGoogle";
+import { isCreateByGoogle } from "@/utils/auth/isCreateByGoogle";
 import { signIn } from "next-auth/react";
 
 export async function signInWithCredentials(email: string, password: string) {

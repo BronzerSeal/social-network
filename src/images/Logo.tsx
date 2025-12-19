@@ -1,10 +1,10 @@
 import Image from "next/image";
 
-export default function Logo() {
+export default function Logo({ width = 200 }) {
   return (
     <Image
       src={"/logo-with-text.png"}
-      width={200}
+      width={width}
       height={90}
       alt="Logo"
       preload={true}

@@ -1,7 +1,7 @@
 "use server";
 
 import { IFormData } from "@/types/form-data";
-import { saltAndHashPassword } from "@/utils/password";
+import { saltAndHashPassword } from "@/utils/auth/password";
 import prisma from "@/utils/prisma";
 
 type RegisterResult =

@@ -1,42 +1,37 @@
 "use server";
+
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
-import { getToken, GetTokenParams } from "next-auth/jwt";
+import { getToken } from "next-auth/jwt";
 
 export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  let params: GetTokenParams = {
+  const token = await getToken({
     req: request,
-    secret: process.env.AUTH_SECRET ?? "secret",
-  };
-
-  if (process.env.NODE_ENV === "production") {
-    params = {
-      ...params,
-      cookieName: "__Secure-authjs.session-token",
-    };
-  }
-
-  const token = await getToken(params);
+    secret: process.env.AUTH_SECRET,
+    cookieName:
+      process.env.NODE_ENV === "production"
+        ? "__Secure-authjs.session-token"
+        : undefined,
+  });
 
   const protectedRoutes = ["/feed"];
+  const authRoutes = ["/", "/accounts/password/reset"];
 
-  if (
-    protectedRoutes.some((route) =>
-      pathname.startsWith(route.replace(":path*", ""))
-    )
-  ) {
-    if (!token) {
-      const url = new URL("/error", request.url);
-      url.searchParams.set("message", "unauthorized");
-      return NextResponse.redirect(url);
-    }
+  /**  Неавторизован → пытается попасть в protected */
+  if (!token && protectedRoutes.some((route) => pathname.startsWith(route))) {
+    return NextResponse.redirect(new URL("/", request.url));
+  }
+
+  /**  Авторизован → пытается попасть на логин */
+  if (token && authRoutes.some((route) => pathname === route)) {
+    return NextResponse.redirect(new URL("/feed", request.url));
   }
 
   return NextResponse.next();
 }
 
 export const config = {
-  matcher: ["/feed"],
+  matcher: ["/", "/accounts/password/reset", "/feed/:path*"],
 };
