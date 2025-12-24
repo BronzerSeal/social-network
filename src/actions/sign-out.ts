@@ -8,7 +8,7 @@ export async function signOutFunc() {
 
     return result;
   } catch (error) {
-    console.error("Ошибка авторизации:", error);
+    console.error("sign out error:", error);
     throw error;
   }
 }

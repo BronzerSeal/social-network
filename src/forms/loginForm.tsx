@@ -34,6 +34,8 @@ const LoginForm: FC<Props> = ({ changeForm }) => {
       formData.password
     );
 
+    console.log(result);
+
     if (result && result.error) {
       if (result.error === "CredentialsSignin") {
         addToast({
