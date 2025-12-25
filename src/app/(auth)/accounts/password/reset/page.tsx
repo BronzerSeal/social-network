@@ -63,12 +63,20 @@ const ResetPasswordPage = () => {
               onInput={(e: ChangeEvent<HTMLInputElement>) =>
                 setEmail(e.target.value)
               }
+              validate={(value) => {
+                if (!value) return "Email is required";
+                if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value))
+                  return 'The email address must contain the "@" symbol.';
+
+                return null;
+              }}
             />
             <Button
               color="primary"
               className="w-full"
               type="submit"
               isDisabled={!email}
+              data-testid="submit-button"
             >
               Send email
             </Button>

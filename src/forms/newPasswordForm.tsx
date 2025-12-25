@@ -92,6 +92,7 @@ export default function NewPasswordForm() {
                 setConfirm(e.target.value)
               }
               validate={(value) => {
+                if (!value) return "This field is required";
                 if (value !== password) return "The password is not the same ";
                 return null;
               }}
@@ -100,7 +101,10 @@ export default function NewPasswordForm() {
               color="primary"
               className="w-full"
               type="submit"
-              isDisabled={!password || password.length < 6}
+              isDisabled={
+                !password || password.length < 6 || password !== confirm
+              }
+              data-testid="submit-button"
             >
               Save
             </Button>

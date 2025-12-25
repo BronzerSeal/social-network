@@ -80,6 +80,9 @@ const LoginForm: FC<Props> = ({ changeForm }) => {
           onInput={handleChange}
           validate={(value) => {
             if (!value) return "Email is required";
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value))
+              return 'The email address must contain the "@" symbol.';
+
             return null;
           }}
         />
@@ -103,6 +106,7 @@ const LoginForm: FC<Props> = ({ changeForm }) => {
           className="w-full"
           color="primary"
           size="lg"
+          data-testid="submit-button"
           isDisabled={
             !formData.email ||
             !formData.password ||

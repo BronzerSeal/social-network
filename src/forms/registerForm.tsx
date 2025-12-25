@@ -74,6 +74,8 @@ const RegisterForm: FC<Props> = ({ changeForm }) => {
           onInput={handleChange}
           validate={(value) => {
             if (!value) return "Email is required";
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value))
+              return 'The email address must contain the "@" symbol.';
             return null;
           }}
         />
@@ -103,8 +105,9 @@ const RegisterForm: FC<Props> = ({ changeForm }) => {
           value={formData.confirmPassword}
           onInput={handleChange}
           validate={(value) => {
+            if (!value) return "This field is required";
             if (value !== formData.password)
-              return "The password is not the same ";
+              return "The password is not the same";
             return null;
           }}
         />
@@ -127,6 +130,7 @@ const RegisterForm: FC<Props> = ({ changeForm }) => {
           size="lg"
           isDisabled={isModifyDisabled}
           type="submit"
+          data-testid="submit-button"
         >
           Enter
         </Button>

@@ -13,6 +13,7 @@ describe("signInWithCredentials", () => {
 
   beforeEach(() => {
     jest.clearAllMocks();
+    jest.spyOn(console, "error").mockImplementation(() => {});
   });
 
   it("should return error if account created by Google", async () => {
