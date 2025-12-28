@@ -59,6 +59,7 @@ model User {
   accounts      Account[]
   sessions      Session[]
   resetTokens   ResetToken[]
+  posts         Post[] 
 
   @@map("users")
 }
@@ -82,4 +83,12 @@ model ResetToken {
 
   @@index([token])
   @@index([expiresAt])
+}
+
+model Post {
+  id      String   @id @default(cuid())
+  images  String[]
+  text    String
+  userId  String
+  user    User     @relation(fields: [userId], references: [id])
 }

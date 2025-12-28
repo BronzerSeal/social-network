@@ -19,7 +19,7 @@ export async function proxy(request: NextRequest) {
   const protectedRoutes = ["/feed"];
   const authRoutes = ["/", "/accounts/password/reset"];
 
-  /**  Неавторизован → пытается попасть в protected */
+  /**  Неавторизован → пытается попасть в feed */
   if (!token && protectedRoutes.some((route) => pathname.startsWith(route))) {
     return NextResponse.redirect(new URL("/", request.url));
   }

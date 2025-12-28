@@ -1,0 +1,32 @@
+"use client";
+import NewPhotoComponent from "@/components/common/newPhotoComponent";
+import { Button, Textarea } from "@heroui/react";
+import { useState } from "react";
+
+const NewPostForm = () => {
+  const [text, setText] = useState("write something");
+  return (
+    <div>
+      <NewPhotoComponent />
+      <Textarea
+        placeholder="write something"
+        className="mt-1"
+        // @ts-ignore
+        variant="undefined"
+        onChange={(e) => setText(e.target.value)}
+        value={text}
+        errorMessage="The description should be"
+        isInvalid={text.length > 0 ? false : true}
+      />
+      <Button
+        className="mt-1"
+        color="primary"
+        isDisabled={text.length > 0 ? false : true}
+      >
+        Submit
+      </Button>
+    </div>
+  );
+};
+
+export default NewPostForm;

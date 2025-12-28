@@ -8,7 +8,7 @@ export default async function RootLayout({
   return (
     <>
       <Header />
-      <div className="bg-gray-300">{children}</div>
+      <div className="bg-[#edeef0] min-h-screen">{children}</div>
     </>
   );
 }

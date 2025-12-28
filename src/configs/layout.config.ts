@@ -1,4 +1,4 @@
 export const layoutConfig = {
-  headerHeight: "65px",
+  headerHeight: "45px",
   footerHeight: "80px",
 } as const;
