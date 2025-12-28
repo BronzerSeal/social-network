@@ -87,8 +87,17 @@ model ResetToken {
 
 model Post {
   id      String   @id @default(cuid())
-  images  String[]
+  images  PostImage[]
   text    String
   userId  String
   user    User     @relation(fields: [userId], references: [id])
+
+}
+
+model PostImage {
+  id         String    @id @default(cuid())
+  post_id    String    @map("postId")
+  file_name  String    @map("fileName")
+  file_data  String    @map("fileData")
+  post       Post @relation(fields: [post_id], references: [id], onDelete: Cascade)
 }

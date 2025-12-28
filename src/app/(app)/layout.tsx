@@ -1,4 +1,5 @@
 import Header from "@/components/ui/layout/layoutHeader";
+import AppLoader from "@/hoc/app-loader";
 
 export default async function RootLayout({
   children,
@@ -7,8 +8,10 @@ export default async function RootLayout({
 }>) {
   return (
     <>
-      <Header />
-      <div className="bg-[#edeef0] min-h-screen">{children}</div>
+      <AppLoader>
+        <Header />
+        <div className="bg-[#edeef0] min-h-screen">{children}</div>
+      </AppLoader>
     </>
   );
 }

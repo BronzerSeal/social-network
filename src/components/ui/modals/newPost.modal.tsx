@@ -11,7 +11,7 @@ interface IProps {
 const NewPostModal = ({ isOpen, onClose }: IProps) => {
   return (
     <CustomModal isOpen={isOpen} onClose={onClose} title="New post" size="lg">
-      <NewPostForm />
+      <NewPostForm onClose={onClose} />
     </CustomModal>
   );
 };
