@@ -9,7 +9,7 @@ export async function updatePassword({
   token: string;
   password: string;
 }) {
-  const resetToken = await prisma.resetToken.findUnique({
+  const resetToken = await (prisma.resetToken.findUnique as any)({
     where: { token },
     include: { user: true },
   });

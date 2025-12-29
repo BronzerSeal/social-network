@@ -30,8 +30,9 @@ export async function registerUser(
   }
 
   try {
-    const existingUser = await prisma.user.findUnique({
+    const existingUser = await (prisma.user.findUnique as any)({
       where: { email },
+      cacheStrategy: { swr: 0, ttl: 0 },
     });
 
     if (existingUser) {

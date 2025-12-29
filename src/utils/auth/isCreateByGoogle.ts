@@ -3,7 +3,7 @@
 import prisma from "@/utils/prisma";
 
 export async function isCreateByGoogle(email: string) {
-  const user = await prisma.user.findUnique({
+  const user = await (prisma.user.findUnique as any)({
     where: { email },
     select: { provider: true },
   });

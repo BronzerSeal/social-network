@@ -8,7 +8,7 @@ import { jsx } from "react/jsx-runtime";
 const resend = new Resend(process.env.RESEND_API_KEY!);
 
 export async function sendResetLink(email: string) {
-  const user = await prisma.user.findUnique({ where: { email } });
+  const user = await (prisma.user.findUnique as any)({ where: { email } });
   if (!user) return;
 
   if (user.provider !== "credentials") {

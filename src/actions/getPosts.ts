@@ -3,7 +3,7 @@ import prisma from "@/utils/prisma";
 
 export async function getPosts() {
   try {
-    const posts = await prisma.post.findMany({
+    const posts = await (prisma.post.findMany as any)({
       include: {
         images: true,
         user: true,
