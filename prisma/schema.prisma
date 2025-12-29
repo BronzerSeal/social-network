@@ -55,6 +55,9 @@ model User {
   email         String?   @unique
   emailVerified DateTime? @map("email_verified")
   image         String?
+
+  likedPosts    UserLikedPost[]
+
   provider      AuthProvider    @default(credentials) // "credentials" | "google"
   accounts      Account[]
   sessions      Session[]
@@ -86,12 +89,13 @@ model ResetToken {
 }
 
 model Post {
-  id      String   @id @default(cuid())
-  images  PostImage[]
-  text    String
-  userId  String
-  user    User     @relation(fields: [userId], references: [id])
+  id                 String   @id @default(cuid())
+  images             PostImage[]
+  text               String
+  userId             String
+  likedBy            UserLikedPost[]
 
+  user      User     @relation(fields: [userId], references: [id])
 }
 
 model PostImage {
@@ -99,5 +103,15 @@ model PostImage {
   post_id    String    @map("postId")
   file_name  String    @map("fileName")
   file_data  String    @map("fileData")
-  post       Post @relation(fields: [post_id], references: [id], onDelete: Cascade)
+  post       Post      @relation(fields: [post_id], references: [id], onDelete: Cascade)
+}
+
+model UserLikedPost {
+  id         String     @id @default(cuid())
+  user       User       @relation(fields: [userId], references: [id])
+  userId     String   
+  post       Post       @relation(fields: [postId], references: [id])
+  postId     String
+
+  @@unique([userId, postId]) 
 }

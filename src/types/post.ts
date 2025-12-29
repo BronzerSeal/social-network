@@ -15,6 +15,12 @@ interface images {
   file_data: string;
 }
 
+interface Like {
+  id: string;
+  postId: string;
+  userId: string;
+}
+
 export interface Post {
   id: string;
   text: string;
@@ -28,4 +34,5 @@ export interface PostWithUser {
   userId: string;
   images: images[];
   user: User;
+  likedBy: Like[];
 }

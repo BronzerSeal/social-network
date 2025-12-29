@@ -14,6 +14,8 @@ const FeedPage = () => {
   console.log(posts);
   const { isOpen, onOpen, onClose } = useDisclosure();
 
+  if (!session) return <p>Loading</p>;
+
   return (
     <div className="flex justify-center">
       <div className="grid sm:grid-cols-[1fr_4fr] gap-6 max-w-[1024px] w-full ">

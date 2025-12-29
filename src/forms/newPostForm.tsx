@@ -4,6 +4,7 @@ import { Button, Textarea } from "@heroui/react";
 import { useState } from "react";
 import axios from "axios";
 import { useSession } from "next-auth/react";
+import { loadPosts } from "@/store/posts.store.";
 
 interface IProps {
   onClose: () => void;
@@ -32,6 +33,9 @@ const NewPostForm = ({ onClose }: IProps) => {
         "Content-Type": "multipart/form-data",
       },
     });
+
+    loadPosts();
+
     onClose();
   };
 

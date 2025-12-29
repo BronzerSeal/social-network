@@ -7,6 +7,7 @@ export async function getPosts() {
       include: {
         images: true,
         user: true,
+        likedBy: true,
       },
     });
 
