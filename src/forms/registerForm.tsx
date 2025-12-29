@@ -132,7 +132,7 @@ const RegisterForm: FC<Props> = ({ changeForm }) => {
           type="submit"
           data-testid="submit-button"
         >
-          Enter
+          Create
         </Button>
       </form>
 
