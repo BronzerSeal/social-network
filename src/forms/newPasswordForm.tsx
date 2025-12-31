@@ -1,5 +1,5 @@
 "use client";
-import { updatePassword } from "@/actions/update-password";
+import { updatePassword } from "@/actions/changePassword/update-password";
 import { ChangeEvent, FormEvent, useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import {

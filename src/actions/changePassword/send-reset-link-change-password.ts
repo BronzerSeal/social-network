@@ -9,7 +9,7 @@ const resend = new Resend(process.env.RESEND_API_KEY!);
 
 export async function sendResetLink(email: string) {
   const user = await (prisma.user.findUnique as any)({ where: { email } });
-  if (!user) return;
+  if (!user) return { code: 400, error: "This email is not registered." };
 
   if (user.provider !== "credentials") {
     return {
@@ -33,10 +33,19 @@ export async function sendResetLink(email: string) {
 
   const resetUrl = `${process.env.NEXT_PUBLIC_APP_URL}/accounts/password/reset/new?token=${token}`;
 
-  await resend.emails.send({
-    from: "onboarding@resend.dev",
-    to: email,
-    subject: "Reset your password",
-    react: jsx(EmailForm, { resetUrl }),
-  });
+  try {
+    const response = await resend.emails.send({
+      from: "onboarding@resend.dev",
+      to: email,
+      subject: "Reset your password",
+      react: EmailForm({ resetUrl }),
+    });
+
+    console.log("RESEND RESPONSE:", response);
+
+    return { success: true };
+  } catch (e) {
+    console.error("RESEND ERROR:", e);
+    return { success: false, error: "failed to send" };
+  }
 }

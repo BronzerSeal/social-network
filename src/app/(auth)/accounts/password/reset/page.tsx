@@ -1,5 +1,5 @@
 "use client";
-import { sendResetLink } from "@/actions/send-reset-link-change-password";
+import { sendResetLink } from "@/actions/changePassword/send-reset-link-change-password";
 // import { sendResetLink } from "@/actions/send-reset-link";
 import { pageUrls } from "@/configs/pageUrls.config";
 import {
@@ -23,10 +23,16 @@ const ResetPasswordPage = () => {
     e.preventDefault();
     try {
       const res = await sendResetLink(email);
+      console.log("res:", res);
       if (res?.code === 400) {
         addToast({
           title: res.error,
           color: "warning",
+        });
+      } else {
+        addToast({
+          title: "the letter was sent to your email",
+          color: "success",
         });
       }
     } catch (error) {

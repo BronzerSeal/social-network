@@ -21,6 +21,16 @@ interface Like {
   userId: string;
 }
 
+export interface CommentProps {
+  createdAt: Date;
+  id: string;
+  postId: string;
+  text: string;
+  updatedAt: Date;
+  userId: string;
+  user: User;
+}
+
 export interface Post {
   id: string;
   text: string;
@@ -35,4 +45,5 @@ export interface PostWithUser {
   images: images[];
   user: User;
   likedBy: Like[];
+  comments: CommentProps[];
 }

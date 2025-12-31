@@ -1,5 +1,5 @@
 "use client";
-import { signInWithCredentials } from "@/actions/sign-in";
+import { signInWithCredentials } from "@/actions/auth/sign-in";
 import GoogleEnter from "@/components/common/GoogleEnter";
 import { pageUrls } from "@/configs/pageUrls.config";
 import { addToast, Button, Divider, Input } from "@heroui/react";

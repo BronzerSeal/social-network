@@ -1,4 +1,4 @@
-import { registerUser } from "@/actions/register";
+import { registerUser } from "@/actions/auth/register";
 import { saltAndHashPassword } from "@/utils/auth/password";
 import { prismaMock } from "@/../singleton";
 

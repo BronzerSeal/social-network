@@ -1,5 +1,5 @@
 "use client";
-import { registerUser } from "@/actions/register";
+import { registerUser } from "@/actions/auth/register";
 import GoogleEnter from "@/components/common/GoogleEnter";
 import { addToast, Button, Divider, Input } from "@heroui/react";
 import { Dispatch, FC, SetStateAction, useState } from "react";

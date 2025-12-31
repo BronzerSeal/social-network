@@ -1,6 +1,6 @@
 "use client";
-import { deletePost } from "@/actions/deletePost";
-import toggleFavouritePost from "@/actions/toggleFavouritePost";
+import { deletePost } from "@/actions/posts/deletePost";
+import toggleFavouritePost from "@/actions/posts/toggleFavouritePost";
 import { loadPosts } from "@/store/posts.store.";
 import { PostWithUser } from "@/types/post";
 import {
@@ -11,10 +11,12 @@ import {
   CardFooter,
   CardHeader,
   Image,
+  useDisclosure,
 } from "@heroui/react";
 import { ExternalLink, Heart, MessageSquare, X } from "lucide-react";
 import { useSession } from "next-auth/react";
 import { useState } from "react";
+import CommentsModal from "./modals/comments.modal";
 
 const UserPost = ({ post }: { post: PostWithUser }) => {
   const { data: session } = useSession();
@@ -28,6 +30,10 @@ const UserPost = ({ post }: { post: PostWithUser }) => {
 
   const [heart, setHeart] = useState(likedByUser);
   const [heartCount, setHeartCount] = useState(post.likedBy.length);
+
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
+  const [commentsList, setCommentsList] = useState(post.comments);
 
   const toggleHeart = async () => {
     if (!post.id || !session?.user.id) return;
@@ -115,15 +121,22 @@ const UserPost = ({ post }: { post: PostWithUser }) => {
           />
           <p>{heartCount}</p>
         </div>
-        <div className="flex gap-1 cursor-pointer">
+        <div onClick={onOpen} className="flex gap-1 cursor-pointer">
           <MessageSquare />
-          <p>1</p>
+          <p>{post.comments.length}</p>
         </div>
         <div className="flex gap-1 cursor-pointer">
           <ExternalLink />
           <p>1</p>
         </div>
       </CardFooter>
+      <CommentsModal
+        onClose={onClose}
+        isOpen={isOpen}
+        postId={post.id}
+        comments={commentsList}
+        setComments={setCommentsList}
+      />
     </Card>
   );
 };

@@ -14,7 +14,7 @@ import {
 } from "@heroui/react";
 import Logo from "@/images/Logo";
 import { useState } from "react";
-import { signOutFunc } from "@/actions/sign-out";
+import { signOutFunc } from "@/actions/auth/sign-out";
 import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
 import { SearchIcon } from "lucide-react";
@@ -84,7 +84,6 @@ export default function LayoutHeader() {
               size="sm"
               src={
                 session?.user?.image ||
-                session?.user?.name ||
                 "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxtrl0ohoaUwmcQnPCoWlgM3zuA6-3zXX7PQ&s"
               }
             />

@@ -1,5 +1,5 @@
 import { prismaMock } from "@/../singleton";
-import { sendResetLink } from "@/actions/send-reset-link-change-password";
+import { sendResetLink } from "@/actions/changePassword/send-reset-link-change-password";
 import crypto from "crypto";
 import { Resend } from "resend";
 
@@ -25,7 +25,10 @@ describe("send-reset-link-change-password", () => {
     prismaMock.user.findUnique.mockResolvedValue(null);
 
     const result = await sendResetLink("not-real@gmail.com");
-    expect(result).toBeUndefined();
+    expect(result).toEqual({
+      code: 400,
+      error: "This email is not registered.",
+    });
   });
 
   it("should return error if user created by Google", async () => {

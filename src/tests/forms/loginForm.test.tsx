@@ -2,7 +2,7 @@ import LoginForm from "@/forms/loginForm";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import * as nextAuth from "next-auth/react";
-import { signInWithCredentials } from "@/actions/sign-in";
+import { signInWithCredentials } from "@/actions/auth/sign-in";
 
 jest.mock("next-auth/react", () => {
   const actual = jest.requireActual("next-auth/react");
@@ -12,7 +12,7 @@ jest.mock("next-auth/react", () => {
   };
 });
 
-jest.mock("@/actions/sign-in", () => ({
+jest.mock("@/actions/auth/sign-in", () => ({
   signInWithCredentials: jest.fn(),
 }));
 

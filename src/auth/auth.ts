@@ -71,10 +71,11 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 
         const dbUser = await (prisma.user.findUnique as any)({
           where: { id: user.id },
-          select: { provider: true },
+          select: { provider: true, name: true },
         });
 
         token.provider = dbUser?.provider;
+        token.name = dbUser?.name;
       }
 
       return token;
@@ -85,6 +86,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         session.user.id = token.id as string;
         session.user.email = token.email as string;
         session.user.provider = token.provider as string;
+        session.user.name = token.name as string;
       }
       return session;
     },

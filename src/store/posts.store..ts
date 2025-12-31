@@ -1,4 +1,4 @@
-import { getPosts } from "@/actions/getPosts";
+import { getPosts } from "@/actions/posts/getPosts";
 import { PostWithUser } from "@/types/post";
 import { create } from "zustand";
 import { devtools } from "zustand/middleware";

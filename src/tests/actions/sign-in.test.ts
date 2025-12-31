@@ -1,5 +1,5 @@
 // signInWithCredentials.test.ts
-import { signInWithCredentials } from "@/actions/sign-in";
+import { signInWithCredentials } from "@/actions/auth/sign-in";
 import { isCreateByGoogle } from "@/utils/auth/isCreateByGoogle";
 import { signIn } from "next-auth/react";
 

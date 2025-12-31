@@ -8,13 +8,13 @@ import { Plus } from "lucide-react";
 import { useSession } from "next-auth/react";
 
 const FeedPage = () => {
-  const { data: session, status } = useSession();
+  const { data: session } = useSession();
   const posts = usePosts();
   const postsLoading = usePostIsLoading();
   console.log(posts);
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  if (!session) return <p>Loading</p>;
+  if (!session) return <p>unauthorized</p>;
 
   return (
     <div className="flex justify-center">

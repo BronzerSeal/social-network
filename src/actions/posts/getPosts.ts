@@ -8,6 +8,14 @@ export async function getPosts() {
         images: true,
         user: true,
         likedBy: true,
+        comments: {
+          orderBy: {
+            createdAt: "desc",
+          },
+          include: {
+            user: true,
+          },
+        },
       },
     });
 

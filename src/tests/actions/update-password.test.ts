@@ -1,5 +1,5 @@
 import { prismaMock } from "@/../singleton";
-import { updatePassword } from "@/actions/update-password";
+import { updatePassword } from "@/actions/changePassword/update-password";
 import { saltAndHashPassword } from "@/utils/auth/password";
 
 jest.mock("@/utils/auth/password");
