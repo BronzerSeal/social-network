@@ -90,14 +90,18 @@ model ResetToken {
 }
 
 model Post {
-  id                 String   @id @default(cuid())
+  id                 String           @id @default(cuid())
   images             PostImage[]
   text               String
   userId             String
+  sentTimes          Int              @default(0)
   likedBy            UserLikedPost[]
   comments           Comment[]
 
-  user      User     @relation(fields: [userId], references: [id])
+  user               User             @relation(fields: [userId], references: [id])
+
+  createdAt          DateTime         @default(now())
+  updatedAt          DateTime         @updatedAt
 }
 
 model PostImage {

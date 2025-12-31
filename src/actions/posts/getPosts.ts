@@ -9,13 +9,12 @@ export async function getPosts() {
         user: true,
         likedBy: true,
         comments: {
-          orderBy: {
-            createdAt: "desc",
-          },
-          include: {
-            user: true,
-          },
+          orderBy: { createdAt: "desc" },
+          include: { user: true },
         },
+      },
+      orderBy: {
+        createdAt: "desc",
       },
     });
 

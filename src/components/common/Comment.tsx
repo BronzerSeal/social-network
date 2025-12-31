@@ -1,6 +1,6 @@
 "use client";
 
-import { deleteComment } from "@/actions/comments/deleteComment";
+import { deleteComment } from "@/actions/posts/comments/deleteComment";
 import { CommentProps } from "@/types/post";
 import { formatTime } from "@/utils/formatTime";
 import { addToast, Avatar } from "@heroui/react";

@@ -17,6 +17,7 @@ import { ExternalLink, Heart, MessageSquare, X } from "lucide-react";
 import { useSession } from "next-auth/react";
 import { useState } from "react";
 import CommentsModal from "./modals/comments.modal";
+import { increaseSentTimes } from "@/actions/posts/sentTimes/increaseSentTimes";
 
 const UserPost = ({ post }: { post: PostWithUser }) => {
   const { data: session } = useSession();
@@ -34,6 +35,7 @@ const UserPost = ({ post }: { post: PostWithUser }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const [commentsList, setCommentsList] = useState(post.comments);
+  const [sentTimes, setSentTimes] = useState(post.sentTimes);
 
   const toggleHeart = async () => {
     if (!post.id || !session?.user.id) return;
@@ -55,6 +57,30 @@ const UserPost = ({ post }: { post: PostWithUser }) => {
       console.error(err);
     }
   };
+
+  const copyLinkAndIncreaseSentTimes = async () => {
+    try {
+      const link = window.location.href;
+      await navigator.clipboard.writeText(link);
+      console.log("Link copied:", link);
+
+      // здесь можешь дернуть API, чтобы увеличить счетчик "sentTimes"
+      await increaseSentTimes(post.id);
+      setSentTimes((prev) => (prev += 1));
+
+      addToast({
+        title: "The link has been copied to the clipboard.",
+        color: "success",
+      });
+    } catch (err) {
+      console.error("Copy failed:", err);
+      addToast({
+        title: "Failed to copy link",
+        color: "danger",
+      });
+    }
+  };
+
   return (
     <Card className="mt-2">
       <CardHeader className="flex items-center justify-between w-full">
@@ -124,9 +150,12 @@ const UserPost = ({ post }: { post: PostWithUser }) => {
           <MessageSquare />
           <p>{commentsList.length}</p>
         </div>
-        <div className="flex gap-1 cursor-pointer">
+        <div
+          className="flex gap-1 cursor-pointer"
+          onClick={copyLinkAndIncreaseSentTimes}
+        >
           <ExternalLink />
-          <p>1</p>
+          <p>{sentTimes}</p>
         </div>
       </CardFooter>
       <CommentsModal

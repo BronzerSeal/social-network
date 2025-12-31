@@ -1,6 +1,6 @@
 "use client";
 
-import { createComment } from "@/actions/comments/createComment";
+import { createComment } from "@/actions/posts/comments/createComment";
 import { CommentProps } from "@/types/post";
 import { addToast, Avatar, Button, Input } from "@heroui/react";
 import { Send } from "lucide-react";

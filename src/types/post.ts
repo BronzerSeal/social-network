@@ -36,6 +36,7 @@ export interface Post {
   text: string;
   userId: string;
   images: images[];
+  sentTimes: number;
 }
 
 export interface PostWithUser {
@@ -46,4 +47,5 @@ export interface PostWithUser {
   user: User;
   likedBy: Like[];
   comments: CommentProps[];
+  sentTimes: number;
 }
