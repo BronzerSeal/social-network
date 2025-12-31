@@ -112,9 +112,8 @@ const UserPost = ({ post }: { post: PostWithUser }) => {
         <h1 className="mt-2">{post.text}</h1>
       </CardBody>
       <CardFooter className="flex gap-3 text-gray-600">
-        <div className="flex gap-1 cursor-pointer">
+        <div className="flex gap-1 cursor-pointer" onClick={toggleHeart}>
           <Heart
-            onClick={toggleHeart}
             className={`h-6 w-6 transition-colors ${
               heart ? "text-red-500 fill-red-500" : ""
             }`}
@@ -123,7 +122,7 @@ const UserPost = ({ post }: { post: PostWithUser }) => {
         </div>
         <div onClick={onOpen} className="flex gap-1 cursor-pointer">
           <MessageSquare />
-          <p>{post.comments.length}</p>
+          <p>{commentsList.length}</p>
         </div>
         <div className="flex gap-1 cursor-pointer">
           <ExternalLink />
