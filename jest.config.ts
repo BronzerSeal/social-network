@@ -22,6 +22,11 @@ const config: Config = {
   moduleNameMapper: {
     "^@/(.*)$": "<rootDir>/src/$1",
   },
+  testPathIgnorePatterns: [
+    "/node_modules/",
+    "/src/tests/e2e/", // или где лежат e2e
+    "playwright",
+  ],
 
   // A list of reporter names that Jest uses when writing coverage reports
   // coverageReporters: [

@@ -53,7 +53,12 @@ const NewCommentForm = ({ postId, setComments }: Props) => {
         onInput={(e: ChangeEvent<HTMLInputElement>) => setValue(e.target.value)}
       />
 
-      <Button isDisabled={!value} onPress={handleCreateComment} color="primary">
+      <Button
+        isDisabled={!value}
+        onPress={handleCreateComment}
+        color="primary"
+        data-testid="commentSubmit"
+      >
         <Send />
       </Button>
     </div>

@@ -1,5 +1,5 @@
 import { isCreateByGoogle } from "@/utils/auth/isCreateByGoogle";
-import { prismaMock } from "../../../singleton";
+import { prismaMock } from "../../../../singleton";
 
 describe("isCreateByGoogle", () => {
   test("should return true if create by Google", async () => {

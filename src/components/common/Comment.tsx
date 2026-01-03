@@ -63,6 +63,7 @@ const Comment = ({ comment, setComments, comments }: Props) => {
             <X
               color="gray"
               className="cursor-pointer"
+              data-testid="CommentDelete"
               onClick={handleDeleteComment}
               size={20}
             />
