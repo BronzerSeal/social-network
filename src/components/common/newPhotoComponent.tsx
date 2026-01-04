@@ -5,11 +5,12 @@ import { ArrowUpFromLine, X } from "lucide-react";
 
 const MAX_FILE_SIZE = 4.5 * 1024 * 1024; // 4.5 MB
 
-const NewPhotoComponent = ({
-  onFilesChange,
-}: {
+interface Props {
   onFilesChange?: (files: File[]) => void;
-}) => {
+  maxFiles?: number; // 👈 новое
+}
+
+const NewPhotoComponent = ({ onFilesChange, maxFiles = 20 }: Props) => {
   const inputRef = useRef<HTMLInputElement | null>(null);
 
   const [previews, setPreviews] = useState<string[]>([]);
@@ -19,57 +20,44 @@ const NewPhotoComponent = ({
 
   const syncFiles = (newFiles: File[]) => {
     setFiles(newFiles);
-
     onFilesChange?.(newFiles);
-  };
-
-  const openFileDialog = () => {
-    inputRef.current?.click();
   };
 
   const handleFiles = (fileList: FileList | null) => {
     if (!fileList) return;
 
-    const validFiles: File[] = [];
-    let errorMessage: string | null = null;
+    let newFiles = Array.from(fileList);
 
-    Array.from(fileList).forEach((file) => {
+    // фильтр по размеру
+    setError(null);
+
+    newFiles = newFiles.filter((file) => {
       if (file.size > MAX_FILE_SIZE) {
-        errorMessage = "The file is larger than 4.5 MB and was not added.";
-        return;
+        setError("The file is larger than 4.5 MB and was not added.");
+        return false;
       }
-      validFiles.push(file);
+      return true;
     });
 
-    if (errorMessage) setError(errorMessage);
-    else setError(null);
+    // ---------- ЛОГИКА ОГРАНИЧЕНИЯ КОЛИЧЕСТВА ----------
 
-    const updatedFiles = [...files, ...validFiles];
-    const newPreviews = validFiles.map((file) => URL.createObjectURL(file));
+    // если только одно фото → просто заменяем
+    if (maxFiles === 1) {
+      const file = newFiles[0];
+      if (!file) return;
 
-    setPreviews((prev) => [...prev, ...newPreviews]);
+      setPreviews([URL.createObjectURL(file)]);
+      syncFiles([file]);
+      return;
+    }
 
-    syncFiles(updatedFiles);
-  };
+    // если несколько → добавляем но ограничиваем общее количество
+    const merged = [...files, ...newFiles].slice(0, maxFiles);
 
-  const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    handleFiles(e.target.files);
-  };
+    const newPreviews = merged.map((file) => URL.createObjectURL(file));
 
-  const onDragOver = (e: React.DragEvent<HTMLDivElement>) => {
-    e.preventDefault();
-    setIsDragOver(true);
-  };
-
-  const onDragLeave = (e: React.DragEvent<HTMLDivElement>) => {
-    e.preventDefault();
-    setIsDragOver(false);
-  };
-
-  const onDrop = (e: React.DragEvent<HTMLDivElement>) => {
-    e.preventDefault();
-    setIsDragOver(false);
-    handleFiles(e.dataTransfer.files);
+    setPreviews(newPreviews);
+    syncFiles(merged);
   };
 
   const removeImage = (index: number) => {
@@ -77,7 +65,6 @@ const NewPhotoComponent = ({
     const newPreviews = previews.filter((_, i) => i !== index);
 
     setPreviews(newPreviews);
-
     syncFiles(newFiles);
   };
 
@@ -87,16 +74,26 @@ const NewPhotoComponent = ({
         ref={inputRef}
         type="file"
         accept="image/*"
-        multiple
+        multiple={maxFiles > 1} // 👈 авто переключение
         className="hidden"
-        onChange={onChange}
+        onChange={(e) => handleFiles(e.target.files)}
       />
 
       <div
-        onClick={openFileDialog}
-        onDragOver={onDragOver}
-        onDragLeave={onDragLeave}
-        onDrop={onDrop}
+        onClick={() => inputRef.current?.click()}
+        onDragOver={(e) => {
+          e.preventDefault();
+          setIsDragOver(true);
+        }}
+        onDragLeave={(e) => {
+          e.preventDefault();
+          setIsDragOver(false);
+        }}
+        onDrop={(e) => {
+          e.preventDefault();
+          setIsDragOver(false);
+          handleFiles(e.dataTransfer.files);
+        }}
         className={`w-full h-[300px] border-2 border-dashed rounded-xl flex flex-col items-center justify-center cursor-pointer transition 
           ${
             isDragOver
@@ -114,6 +111,10 @@ const NewPhotoComponent = ({
 
         <span className="text-sm text-gray-500 mt-1">
           Limit: 4.5 MB per file
+        </span>
+
+        <span className="text-xs text-gray-400 mt-1">
+          Max files: {maxFiles}
         </span>
       </div>
 

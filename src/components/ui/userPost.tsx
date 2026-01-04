@@ -18,6 +18,7 @@ import { useSession } from "next-auth/react";
 import { useState } from "react";
 import CommentsModal from "./modals/comments.modal";
 import { increaseSentTimes } from "@/actions/posts/sentTimes/increaseSentTimes";
+import EnlargeImageModal from "./modals/enlargeImage.modal";
 
 const UserPost = ({ post }: { post: PostWithUser }) => {
   const { data: session } = useSession();
@@ -36,6 +37,19 @@ const UserPost = ({ post }: { post: PostWithUser }) => {
 
   const [commentsList, setCommentsList] = useState(post.comments);
   const [sentTimes, setSentTimes] = useState(post.sentTimes);
+
+  const {
+    isOpen: isImageOpen,
+    onOpen: onImageOpen,
+    onClose: onImageClose,
+  } = useDisclosure();
+
+  const [previewImage, setPreviewImage] = useState<string | null>(null);
+
+  const openImage = (src: string) => {
+    setPreviewImage(src);
+    onImageOpen();
+  };
 
   const toggleHeart = async () => {
     if (!post.id || !session?.user.id) return;
@@ -110,7 +124,8 @@ const UserPost = ({ post }: { post: PostWithUser }) => {
                 alt={post.images[0].file_name}
                 height={400}
                 src={post.images[0].file_data}
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover cursor-pointer"
+                onClick={() => openImage(post.images[0].file_data)}
               />
             </div>
 
@@ -125,7 +140,8 @@ const UserPost = ({ post }: { post: PostWithUser }) => {
                     width={150}
                     radius="sm"
                     src={image.file_data}
-                    className="object-cover shrink-0"
+                    className="object-cover shrink-0 cursor-pointer"
+                    onClick={() => openImage(image.file_data)}
                   />
                 ))}
               </div>
@@ -171,6 +187,11 @@ const UserPost = ({ post }: { post: PostWithUser }) => {
         postId={post.id}
         comments={commentsList}
         setComments={setCommentsList}
+      />
+      <EnlargeImageModal
+        isImageOpen={isImageOpen}
+        onImageClose={onImageClose}
+        previewImage={previewImage}
       />
     </Card>
   );

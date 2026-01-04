@@ -18,8 +18,7 @@ const FeedPage = () => {
 
   return (
     <div className="flex justify-center">
-      <div className="grid sm:grid-cols-[1fr_4fr] gap-6 max-w-[1024px] w-full ">
-        <SideBar />
+      <div className="max-w-5xl w-full ">
         <div className="py-2">
           <Button
             className="w-full"

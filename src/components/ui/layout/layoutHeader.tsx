@@ -97,7 +97,7 @@ export default function LayoutHeader() {
             </DropdownItem>
             <DropdownItem
               key="settings"
-              onClick={() => router.push("/settings")}
+              onClick={() => router.push(`/user/${session?.user.name}`)}
             >
               My Settings
             </DropdownItem>

@@ -1,8 +1,10 @@
 "use client";
 import { sideBarSectionsConfig } from "@/configs/sideBar.config";
-import { addToast, Listbox, ListboxItem } from "@heroui/react";
+import { Listbox, ListboxItem } from "@heroui/react";
 import { Contact, House, UserRoundPen } from "lucide-react";
-import { JSX, useState } from "react";
+import { useSession } from "next-auth/react";
+import { useRouter } from "next/navigation";
+import { JSX } from "react";
 
 const iconMap: Record<string, JSX.Element> = {
   UserRoundPen: <UserRoundPen />,
@@ -17,26 +19,23 @@ export const ListboxWrapper = ({ children }: { children: React.ReactNode }) => (
 );
 
 const SideBar = () => {
-  const [choosedSection, setChoosedSection] = useState("Home");
+  const router = useRouter();
+  const { data: session } = useSession();
 
   return (
     <ListboxWrapper>
-      <Listbox
-        variant="shadow"
-        aria-label="Actions"
-        onAction={(key) =>
-          addToast({
-            title: key,
-            color: "success",
-          })
-        }
-        selectedKeys={["Home"]}
-      >
+      <Listbox variant="shadow" aria-label="Actions" selectedKeys={["Home"]}>
         {sideBarSectionsConfig.map((section) => (
           <ListboxItem
             key={section.title}
             startContent={iconMap[section.icon] || <></>}
-            isSelected={section.title === choosedSection}
+            onClick={() => {
+              if (section.travelUrl === "/user") {
+                router.push(`${section.travelUrl}/${session?.user.name}`);
+              } else {
+                router.push(section.travelUrl);
+              }
+            }}
           >
             {section.title}
           </ListboxItem>
