@@ -55,6 +55,7 @@ model User {
   email         String?   @unique
   emailVerified DateTime? @map("email_verified")
   image         String?
+  dopInfo       String?
 
   likedPosts    UserLikedPost[]
   comments      Comment[]
@@ -116,7 +117,7 @@ model UserLikedPost {
   id         String     @id @default(cuid())
   user       User       @relation(fields: [userId], references: [id])
   userId     String   
-  post       Post       @relation(fields: [postId], references: [id])
+  post       Post       @relation(fields: [postId], references: [id], onDelete: Cascade)
   postId     String
 
   @@unique([userId, postId]) 
@@ -129,7 +130,7 @@ model Comment {
   text       String
 
   user       User @relation(fields: [userId],references: [id])
-  post       Post @relation(fields: [postId], references: [id])
+  post       Post @relation(fields: [postId], references: [id], onDelete: Cascade)
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt

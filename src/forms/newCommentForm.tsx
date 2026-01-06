@@ -1,6 +1,7 @@
 "use client";
 
 import { createComment } from "@/actions/posts/comments/createComment";
+import { loadPostById, loadPosts } from "@/store/posts.store.";
 import { CommentProps } from "@/types/post";
 import { addToast, Avatar, Button, Input } from "@heroui/react";
 import { Send } from "lucide-react";
@@ -17,7 +18,16 @@ const NewCommentForm = ({ postId, setComments }: Props) => {
   const [value, setValue] = useState("");
 
   const handleCreateComment = async () => {
-    if (!value || !session?.user.id) return;
+    if (!session?.user.id)
+      return addToast({
+        title: "Log in to write comments",
+        color: "danger",
+      });
+    if (!value)
+      return addToast({
+        title: "write something to post comment",
+        color: "danger",
+      });
     const result = await createComment(postId, session?.user.id, value);
 
     if (!result?.comment) {
@@ -37,6 +47,7 @@ const NewCommentForm = ({ postId, setComments }: Props) => {
       color: "success",
     });
     setValue("");
+    loadPostById(postId);
   };
 
   return (

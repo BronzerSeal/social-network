@@ -26,7 +26,7 @@ export default function LayoutHeader() {
   const [searchValue, setSearchValue] = useState("");
 
   if (status === "loading") return <p>Loading...</p>;
-  else if (status === "unauthenticated") return <p>Unauthenticated</p>;
+  // else if (status === "unauthenticated") return <p>Unauthenticated</p>;
 
   const changeSearchValue = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchValue(e.target.value);
@@ -73,45 +73,64 @@ export default function LayoutHeader() {
         </NavbarContent>
       </NavbarItem>
       <NavbarContent justify="end">
-        <Dropdown placement="bottom-end">
-          <DropdownTrigger>
-            <Avatar
-              isBordered
-              as="button"
-              className="transition-transform"
-              color="success"
-              name={session?.user?.name || "user"}
-              size="sm"
-              src={
-                session?.user?.image ||
-                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxtrl0ohoaUwmcQnPCoWlgM3zuA6-3zXX7PQ&s"
-              }
-            />
-          </DropdownTrigger>
-          <DropdownMenu aria-label="Profile Actions" variant="flat">
-            <DropdownItem key="profile" className="h-14 gap-2">
-              <p className="font-semibold">Signed in as</p>
-              <p className="font-semibold">
-                {session?.user?.name || session?.user?.name}
-              </p>
-            </DropdownItem>
-            <DropdownItem
-              key="settings"
-              onClick={() => router.push(`/user/${session?.user.name}`)}
-            >
-              My Settings
-            </DropdownItem>
-            <DropdownItem
-              key="help_and_feedback"
-              onClick={() => router.push("/help")}
-            >
-              Help & Feedback
-            </DropdownItem>
-            <DropdownItem key="logout" color="danger" onClick={handleSignOut}>
-              Log Out
-            </DropdownItem>
-          </DropdownMenu>
-        </Dropdown>
+        {!session?.user.id ? (
+          <Dropdown placement="bottom-end">
+            <DropdownTrigger>
+              <Avatar
+                isBordered
+                as="button"
+                className="transition-transform"
+                color="success"
+                size="sm"
+              />
+            </DropdownTrigger>
+            <DropdownMenu aria-label="Profile Actions" variant="flat">
+              <DropdownItem key="login" onClick={() => router.push(`/`)}>
+                Log in
+              </DropdownItem>
+            </DropdownMenu>
+          </Dropdown>
+        ) : (
+          <Dropdown placement="bottom-end">
+            <DropdownTrigger>
+              <Avatar
+                isBordered
+                as="button"
+                className="transition-transform"
+                color="success"
+                name={session?.user?.name || "user"}
+                size="sm"
+                src={
+                  session?.user?.image ||
+                  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxtrl0ohoaUwmcQnPCoWlgM3zuA6-3zXX7PQ&s"
+                }
+              />
+            </DropdownTrigger>
+            <DropdownMenu aria-label="Profile Actions" variant="flat">
+              <DropdownItem key="profile" className="h-14 gap-2">
+                <p className="font-semibold">Signed in as</p>
+                <p className="font-semibold">
+                  {session?.user?.name || session?.user?.name}
+                </p>
+              </DropdownItem>
+              <DropdownItem
+                key="settings"
+                onClick={() => router.push(`/user/${session?.user.id}`)}
+              >
+                My Settings
+              </DropdownItem>
+              <DropdownItem
+                key="help_and_feedback"
+                onClick={() => router.push("/help")}
+              >
+                Help & Feedback
+              </DropdownItem>
+              <DropdownItem key="logout" color="danger" onClick={handleSignOut}>
+                Log Out
+              </DropdownItem>
+            </DropdownMenu>
+          </Dropdown>
+        )}
       </NavbarContent>
     </Navbar>
   );

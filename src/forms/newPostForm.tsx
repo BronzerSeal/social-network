@@ -5,6 +5,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useSession } from "next-auth/react";
 import { loadPosts } from "@/store/posts.store.";
+import { loadUserPosts } from "@/store/userPosts.store";
 
 interface IProps {
   onClose: () => void;
@@ -35,6 +36,7 @@ const NewPostForm = ({ onClose }: IProps) => {
     });
 
     loadPosts();
+    loadUserPosts(session?.user.id);
 
     onClose();
   };

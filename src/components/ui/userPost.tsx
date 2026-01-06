@@ -19,15 +19,18 @@ import { useState } from "react";
 import CommentsModal from "./modals/comments.modal";
 import { increaseSentTimes } from "@/actions/posts/sentTimes/increaseSentTimes";
 import EnlargeImageModal from "./modals/enlargeImage.modal";
+import { loadUserPosts } from "@/store/userPosts.store";
+import { useRouter } from "next/navigation";
 
 const UserPost = ({ post }: { post: PostWithUser }) => {
   const { data: session } = useSession();
+  const router = useRouter();
   console.log(session);
 
-  if (!session?.user.id) return <p>Loading</p>;
+  // if (!session?.user.id) return <p>Loading</p>;
 
   const likedByUser = post.likedBy.some(
-    (like) => like.userId === session.user.id
+    (like) => like.userId === session?.user.id
   );
 
   const [heart, setHeart] = useState(likedByUser);
@@ -52,7 +55,11 @@ const UserPost = ({ post }: { post: PostWithUser }) => {
   };
 
   const toggleHeart = async () => {
-    if (!post.id || !session?.user.id) return;
+    if (!post.id || !session?.user.id)
+      return addToast({
+        title: "Log in to like post",
+        color: "danger",
+      });
 
     const newHeart = !heart;
     setHeart(newHeart);
@@ -95,7 +102,10 @@ const UserPost = ({ post }: { post: PostWithUser }) => {
   return (
     <Card className="mt-2">
       <CardHeader className="flex items-center justify-between w-full">
-        <div className="flex items-center gap-2">
+        <div
+          className="flex items-center gap-2 cursor-pointer"
+          onClick={() => router.push(`/user/${post.user.id}`)}
+        >
           <Avatar
             alt="avatar"
             size="sm"
@@ -109,6 +119,7 @@ const UserPost = ({ post }: { post: PostWithUser }) => {
             onClick={() => {
               deletePost(post.id);
               loadPosts();
+              loadUserPosts(session?.user.id);
             }}
             data-testid="deletePost"
             className="cursor-pointer"

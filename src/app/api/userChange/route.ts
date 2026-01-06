@@ -6,7 +6,7 @@ import { NextRequest, NextResponse } from "next/server";
 export async function POST(req: NextRequest) {
   try {
     const formData = await req.formData();
-    const variant = formData.get("variant") as string;
+    const variant = formData.get("variant") as "avatar" | "userInfo";
     const userId = formData.get("userId") as string;
 
     if (!variant || !userId) {
@@ -45,6 +45,29 @@ export async function POST(req: NextRequest) {
       });
 
       return NextResponse.json({ updatedUser: updatedUser, file: blob });
+    }
+    if (variant === "userInfo") {
+      const name = formData.get("name") as string;
+      const dopInfo = formData.get("dopInfo") as string;
+
+      if (!name || !dopInfo) {
+        return NextResponse.json(
+          { message: "No name/dopInfo provided" },
+          { status: 400 }
+        );
+      }
+
+      const updatedUser = await prisma.user.update({
+        where: {
+          id: userId,
+        },
+        data: {
+          name: name,
+          dopInfo: dopInfo,
+        },
+      });
+
+      return NextResponse.json({ updatedUser: updatedUser });
     }
   } catch (err) {
     console.error(err);

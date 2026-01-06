@@ -31,7 +31,7 @@ const SideBar = () => {
             startContent={iconMap[section.icon] || <></>}
             onClick={() => {
               if (section.travelUrl === "/user") {
-                router.push(`${section.travelUrl}/${session?.user.name}`);
+                router.push(`${section.travelUrl}/${session?.user.id}`);
               } else {
                 router.push(section.travelUrl);
               }

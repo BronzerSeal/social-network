@@ -1,5 +1,6 @@
 "use client";
 import NewPhotoComponent from "@/components/common/newPhotoComponent";
+import { loadUser, loadUserPosts } from "@/store/userPosts.store";
 import { Button } from "@heroui/react";
 import axios from "axios";
 import { useSession } from "next-auth/react";
@@ -12,7 +13,6 @@ interface IProps {
 const UserChangeAvatarForm = ({ onClose }: IProps) => {
   const [file, setFile] = useState<File[]>([]);
   const { data: session, update } = useSession();
-  console.log("USEFUL session:", session);
 
   const handleSubmit = async () => {
     if (!session?.user.id) return;
@@ -30,14 +30,13 @@ const UserChangeAvatarForm = ({ onClose }: IProps) => {
           "Content-Type": "multipart/form-data",
         },
       });
-      // Получаем новый URL аватара из ответа
       const newAvatarUrl = res.data.updatedUser.image;
-      console.log(newAvatarUrl);
       if (newAvatarUrl) {
         // обновляем session на клиенте
         await update({ image: newAvatarUrl });
+        loadUser(session?.user.id);
+        loadUserPosts(session?.user.id);
       }
-      console.log("UPDATED SESSION", session);
       onClose();
       console.log(res);
     } catch (error) {}

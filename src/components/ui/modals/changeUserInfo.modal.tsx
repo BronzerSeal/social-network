@@ -1,24 +1,24 @@
 "use client";
 
+import UserChangeInfoForm from "@/forms/UserChangeInfoForm copy";
 import CustomModal from "./modal";
-import UserChangeAvatarForm from "@/forms/UserChangeAvatarForm";
 
 interface IProps {
   isOpen: boolean;
   onClose: () => void;
 }
 
-const NewUserAvatar = ({ isOpen, onClose }: IProps) => {
+const ChangeUserInfo = ({ isOpen, onClose }: IProps) => {
   return (
     <CustomModal
       isOpen={isOpen}
       onClose={onClose}
-      title="Change avatar"
+      title="Change info"
       size="lg"
     >
-      <UserChangeAvatarForm onClose={onClose} />
+      <UserChangeInfoForm onClose={onClose} />
     </CustomModal>
   );
 };
 
-export default NewUserAvatar;
+export default ChangeUserInfo;

@@ -1,6 +1,5 @@
 "use client";
 import NewPostModal from "@/components/ui/modals/newPost.modal";
-import SideBar from "@/components/ui/SideBar";
 import UserPost from "@/components/ui/userPost";
 import { usePostIsLoading, usePosts } from "@/store/posts.store.";
 import { Button, useDisclosure } from "@heroui/react";
