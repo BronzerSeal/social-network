@@ -35,8 +35,6 @@ const UserChangeInfoForm = ({ onClose }: IProps) => {
     formData.append("dopInfo", handleFormdata.dopInfo);
     formData.append("userId", session?.user.id);
 
-    console.log(handleFormdata);
-
     try {
       const res = await axios.post("/api/userChange", formData, {
         headers: {

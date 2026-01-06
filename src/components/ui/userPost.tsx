@@ -25,9 +25,6 @@ import { useRouter } from "next/navigation";
 const UserPost = ({ post }: { post: PostWithUser }) => {
   const { data: session } = useSession();
   const router = useRouter();
-  console.log(session);
-
-  // if (!session?.user.id) return <p>Loading</p>;
 
   const likedByUser = post.likedBy.some(
     (like) => like.userId === session?.user.id

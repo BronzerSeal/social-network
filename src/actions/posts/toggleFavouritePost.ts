@@ -9,8 +9,6 @@ const toggleFavouritePost = async (
 ) => {
   if (!userId) return;
 
-  console.log(liked);
-
   if (liked) {
     await prisma.userLikedPost.create({
       data: {

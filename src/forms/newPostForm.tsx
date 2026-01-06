@@ -15,7 +15,6 @@ const NewPostForm = ({ onClose }: IProps) => {
   const { data: session } = useSession();
   const [text, setText] = useState("write something");
   const [files, setFiles] = useState<File[]>([]);
-  console.log(files);
 
   const handleSubmit = async () => {
     if (!session?.user.id) return;
@@ -27,7 +26,6 @@ const NewPostForm = ({ onClose }: IProps) => {
     files.forEach((file) => {
       formData.append("files", file);
     });
-    console.log(formData);
 
     await axios.post("/api/posts", formData, {
       headers: {

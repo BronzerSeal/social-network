@@ -1,4 +1,5 @@
 "use client";
+import UserPostSkeleton from "@/components/skeletons/UserPostSkeleton";
 import NewPostModal from "@/components/ui/modals/newPost.modal";
 import UserPost from "@/components/ui/userPost";
 import { usePostIsLoading, usePosts } from "@/store/posts.store.";
@@ -28,9 +29,11 @@ const FeedPage = () => {
             Create new post
           </Button>
 
-          {postsLoading
-            ? "Loading posts"
-            : posts.map((post) => <UserPost key={post.id} post={post} />)}
+          {postsLoading ? (
+            <UserPostSkeleton />
+          ) : (
+            posts.map((post) => <UserPost key={post.id} post={post} />)
+          )}
         </div>
       </div>
       <NewPostModal isOpen={isOpen} onClose={onClose} />

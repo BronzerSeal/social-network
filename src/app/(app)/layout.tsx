@@ -16,7 +16,7 @@ export default async function RootLayout({
             className={`
   grid
   grid-cols-1
-  grid-rows-[fr_10fr]
+  grid-rows-[auto_1fr]
   sm:grid-cols-[1fr_4fr]
   sm:gap-6
   max-w-5xl

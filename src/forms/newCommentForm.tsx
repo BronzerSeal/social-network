@@ -37,7 +37,6 @@ const NewCommentForm = ({ postId, setComments }: Props) => {
       });
       return;
     }
-    console.log("RESULT: ", result);
     setComments((prev) => [
       { ...result.comment, user: session.user as any },
       ...prev,

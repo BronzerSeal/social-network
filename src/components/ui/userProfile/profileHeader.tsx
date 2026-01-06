@@ -17,7 +17,6 @@ const ProfileHeader = ({ pageUser }: { pageUser: Session["user"] | null }) => {
     onOpen: onUserInfoOpen,
     onClose: onUserInfoClose,
   } = useDisclosure();
-  // console.log(session);
 
   useEffect(() => {
     if (!pageUser?.image) return;

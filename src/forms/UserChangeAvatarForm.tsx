@@ -22,8 +22,6 @@ const UserChangeAvatarForm = ({ onClose }: IProps) => {
     formData.append("variant", "avatar");
     formData.append("userId", session?.user.id);
 
-    console.log(formData);
-
     try {
       const res = await axios.post("/api/userChange", formData, {
         headers: {
@@ -38,7 +36,6 @@ const UserChangeAvatarForm = ({ onClose }: IProps) => {
         loadUserPosts(session?.user.id);
       }
       onClose();
-      console.log(res);
     } catch (error) {}
   };
 

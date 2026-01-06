@@ -1,5 +1,7 @@
 "use client";
 import getUserById from "@/actions/getUserById";
+import ProfileHeaderSkeleton from "@/components/skeletons/ProfileHeaderSkeleton";
+import UserPostSkeleton from "@/components/skeletons/UserPostSkeleton";
 import NewPostModal from "@/components/ui/modals/newPost.modal";
 import UserPost from "@/components/ui/userPost";
 import ProfileHeader from "@/components/ui/userProfile/profileHeader";
@@ -10,8 +12,9 @@ import {
   useProfileUserError,
   useUserPostIsLoading,
   useUserPosts,
+  useUserProfileIsLoading,
 } from "@/store/userPosts.store";
-import { Button, Chip, useDisclosure } from "@heroui/react";
+import { Button, Card, Chip, Skeleton, useDisclosure } from "@heroui/react";
 import { Plus } from "lucide-react";
 import { useSession } from "next-auth/react";
 import { useParams } from "next/navigation";
@@ -22,6 +25,8 @@ const UserPage = () => {
   const { isOpen, onOpen, onClose } = useDisclosure();
   const posts = useUserPosts();
   const postsLoading = useUserPostIsLoading();
+  const userLoading = useUserProfileIsLoading();
+  console.log(userLoading);
 
   const pageUser = useProfileUser();
   const { data: session } = useSession();
@@ -41,7 +46,11 @@ const UserPage = () => {
         </Chip>
       ) : (
         <>
-          <ProfileHeader pageUser={pageUser} />
+          {!userLoading ? (
+            <ProfileHeader pageUser={pageUser} />
+          ) : (
+            <ProfileHeaderSkeleton />
+          )}
           {session?.user.id === pageUser?.id && (
             <Button
               className="w-full mt-2"
@@ -54,7 +63,7 @@ const UserPage = () => {
             </Button>
           )}
           {postsLoading ? (
-            <p>Loading posts</p>
+            <UserPostSkeleton />
           ) : posts.length > 0 ? (
             posts.map((post) => <UserPost key={post.id} post={post} />)
           ) : (

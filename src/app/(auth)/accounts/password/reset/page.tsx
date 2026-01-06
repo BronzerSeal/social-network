@@ -23,7 +23,6 @@ const ResetPasswordPage = () => {
     e.preventDefault();
     try {
       const res = await sendResetLink(email);
-      console.log("res:", res);
       if (res?.code === 400) {
         addToast({
           title: res.error,

@@ -13,7 +13,6 @@ interface Props {
 
 const LoginForm: FC<Props> = ({ changeForm }) => {
   const { data: session } = useSession();
-  console.log(session);
   const [formData, setFormData] = useState({
     email: "",
     password: "",
@@ -33,8 +32,6 @@ const LoginForm: FC<Props> = ({ changeForm }) => {
       formData.email,
       formData.password
     );
-
-    console.log(result);
 
     if (result && result.error) {
       if (result.error === "CredentialsSignin") {

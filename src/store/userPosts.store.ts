@@ -9,6 +9,7 @@ interface IInitialState {
   user: Session["user"] | null;
   userPosts: PostWithUser[];
   isLoading: boolean;
+  isUserLoading: boolean;
   error: string | null;
   userError: string;
 }
@@ -23,6 +24,7 @@ interface PostsState extends IInitialState, IActions {}
 const initialState: IInitialState = {
   userPosts: [],
   isLoading: false,
+  isUserLoading: false,
   error: null,
   userError: "",
   user: null,
@@ -33,15 +35,17 @@ const useUserProfileStore = create<PostsState>()(
     ...initialState,
     loadUser: async (userId: string) => {
       try {
+        set({ isUserLoading: true });
         const res = await getUserById(userId);
         if (res === null) {
           set({ userError: "Unable to find user, Try again later" });
         } else {
           set({ user: res, userError: "" });
         }
-        console.log("res:", res);
+        set({ isUserLoading: false });
       } catch {
         set({ userError: "Unable to find user, Try again later" });
+        set({ isUserLoading: false });
       }
     },
     loadPosts: async (userId: string) => {
@@ -66,11 +70,14 @@ const useUserProfileStore = create<PostsState>()(
 export const useProfileUser = () => useUserProfileStore((state) => state.user);
 export const useProfileUserError = () =>
   useUserProfileStore((state) => state.userError);
+export const loadUser = (userId: string) =>
+  useUserProfileStore.getState().loadUser(userId);
+export const useUserProfileIsLoading = () =>
+  useUserProfileStore((state) => state.isUserLoading);
+
 export const useUserPosts = () =>
   useUserProfileStore((state) => state.userPosts);
 export const useUserPostIsLoading = () =>
   useUserProfileStore((state) => state.isLoading);
 export const loadUserPosts = (userId: string) =>
   useUserProfileStore.getState().loadPosts(userId);
-export const loadUser = (userId: string) =>
-  useUserProfileStore.getState().loadUser(userId);

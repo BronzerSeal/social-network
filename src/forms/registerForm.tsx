@@ -28,7 +28,6 @@ const RegisterForm: FC<Props> = ({ changeForm }) => {
 
     const result = await registerUser(formData);
 
-    console.log(result);
     if ("error" in result) {
       addToast({
         title: result.error,
