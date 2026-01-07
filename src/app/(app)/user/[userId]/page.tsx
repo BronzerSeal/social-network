@@ -2,6 +2,7 @@
 import getUserById from "@/actions/getUserById";
 import ProfileHeaderSkeleton from "@/components/skeletons/ProfileHeaderSkeleton";
 import UserPostSkeleton from "@/components/skeletons/UserPostSkeleton";
+import FriendsSection from "@/components/ui/friendsSection";
 import NewPostModal from "@/components/ui/modals/newPost.modal";
 import UserPost from "@/components/ui/userPost";
 import ProfileHeader from "@/components/ui/userProfile/profileHeader";
@@ -14,7 +15,7 @@ import {
   useUserPosts,
   useUserProfileIsLoading,
 } from "@/store/userPosts.store";
-import { Button, Card, Chip, Skeleton, useDisclosure } from "@heroui/react";
+import { Button, Chip, useDisclosure } from "@heroui/react";
 import { Plus } from "lucide-react";
 import { useSession } from "next-auth/react";
 import { useParams } from "next/navigation";
@@ -51,6 +52,10 @@ const UserPage = () => {
           ) : (
             <ProfileHeaderSkeleton />
           )}
+          <FriendsSection
+            subscriptions={pageUser?.subscriptions}
+            pageUserId={pageUser?.id}
+          />
           {session?.user.id === pageUser?.id && (
             <Button
               className="w-full mt-2"

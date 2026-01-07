@@ -71,17 +71,27 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 
         const dbUser = await (prisma.user.findUnique as any)({
           where: { id: user.id },
-          select: { provider: true, name: true, image: true, dopInfo: true },
+          select: {
+            provider: true,
+            name: true,
+            image: true,
+            dopInfo: true,
+            subscriptions: true,
+          },
         });
 
         token.provider = dbUser?.provider;
         token.name = dbUser?.name;
         token.image = dbUser?.image;
         token.dopInfo = dbUser?.dopInfo;
+        token.subscriptions = dbUser?.subscriptions;
       }
 
       if (trigger === "update" && newSession?.image) {
         token.image = newSession.image;
+      }
+      if (trigger === "update" && newSession?.subscriptions) {
+        token.subscriptions = newSession.subscriptions;
       }
       if ((trigger === "update" && newSession?.name) || newSession?.dopInfo) {
         token.name = newSession.name;
@@ -99,6 +109,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         session.user.name = token.name as string;
         session.user.image = token.image as string;
         session.user.dopInfo = token.dopInfo as string;
+        session.user.subscriptions = token.subscriptions as string[];
       }
       return session;
     },

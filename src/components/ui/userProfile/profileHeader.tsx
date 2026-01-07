@@ -1,15 +1,17 @@
 "use client";
 import { getAverageColor, getLightenColor } from "@/hooks/getColorsByImg";
-import { Avatar, Button, useDisclosure } from "@heroui/react";
+import { addToast, Avatar, Button, useDisclosure } from "@heroui/react";
 import { useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
-import { Settings } from "lucide-react";
+import { Settings, UserRoundMinus, UserRoundPlus } from "lucide-react";
 import NewUserAvatar from "../modals/newUserAvatar.modal";
 import ChangeUserInfo from "../modals/changeUserInfo.modal";
 import { Session } from "next-auth";
+import subscribe from "@/actions/subscribe";
 
 const ProfileHeader = ({ pageUser }: { pageUser: Session["user"] | null }) => {
-  const { data: session } = useSession();
+  const { data: session, update } = useSession();
+  console.log(session);
   const [color, setColor] = useState("136,136,136"); // fallback
   const { isOpen, onOpen, onClose } = useDisclosure();
   const {
@@ -17,6 +19,9 @@ const ProfileHeader = ({ pageUser }: { pageUser: Session["user"] | null }) => {
     onOpen: onUserInfoOpen,
     onClose: onUserInfoClose,
   } = useDisclosure();
+  const subscribed = session?.user.subscriptions.some(
+    (sub) => sub === pageUser?.id
+  );
 
   useEffect(() => {
     if (!pageUser?.image) return;
@@ -28,6 +33,33 @@ const ProfileHeader = ({ pageUser }: { pageUser: Session["user"] | null }) => {
   }, [pageUser?.image]);
 
   const lighter = getLightenColor(color, 0.55);
+
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    // триггерим анимацию после монтирования компонента
+    setMounted(true);
+  }, []);
+
+  const handleSubscribe = async () => {
+    if (!session?.user.id)
+      return addToast({
+        title: "Log in to subscribe",
+        color: "danger",
+      });
+    if (!pageUser?.id) return;
+    try {
+      const updatedUser = await subscribe(session.user.id, pageUser?.id);
+
+      if (updatedUser.code === 200) {
+        await update({ subscriptions: updatedUser.updatedUser.subscriptions });
+      }
+    } catch (error) {
+      addToast({
+        title: "Something was wrong. Try again later",
+        color: "danger",
+      });
+    }
+  };
 
   return (
     <div
@@ -46,13 +78,15 @@ const ProfileHeader = ({ pageUser }: { pageUser: Session["user"] | null }) => {
               src={pageUser?.image || undefined}
               isBordered
               classNames={{
-                base: "w-32 h-32 ring-1 ring-white shadow-2xl shadow-black/30",
+                base: `w-32 h-32 ring-1 ring-white shadow-2xl shadow-black/30 
+                 transition-transform duration-500 ease-out
+                 ${mounted ? "scale-100" : "scale-0"}`, // from 0 to 100%
               }}
             />
             {pageUser?.id === session?.user.id && (
               <button
                 onClick={() => onOpen()}
-                className={`absolute bottom-0 right-0 w-9 h-9 bg-blue-500 rounded-full cursor-pointer flex items-center justify-center text-white shadow-lg border-2 border-white hover:bg-blue-600 transition`}
+                className={`absolute bottom-0 right-0 w-9 h-9 bg-blue-500 rounded-full cursor-pointer flex items-center justify-center text-white shadow-lg border-2 border-white hover:bg-blue-600  transition-transform duration-300 ease-in-out hover:rotate-45`}
               >
                 +
               </button>
@@ -70,14 +104,33 @@ const ProfileHeader = ({ pageUser }: { pageUser: Session["user"] | null }) => {
             </p>
           </div>
         </div>
-        {pageUser?.id === session?.user.id && (
+        {pageUser?.id === session?.user.id ? (
           <Button
             radius="lg"
             color="primary"
-            className="h-12 cursor-pointer"
+            className="h-12 cursor-pointer flex items-center justify-center group"
             onPress={() => onUserInfoOpen()}
           >
-            <Settings />
+            <Settings className="transition-transform duration-300 ease-in-out group-hover:rotate-90" />
+          </Button>
+        ) : (
+          <Button
+            radius="lg"
+            color={`${subscribed ? "default" : "primary"}`}
+            className="h-12 cursor-pointer flex items-center justify-center "
+            onPress={handleSubscribe}
+          >
+            {subscribed ? (
+              <>
+                <p>Unsubscribe</p>
+                <UserRoundMinus />
+              </>
+            ) : (
+              <>
+                <p>Subscribe</p>
+                <UserRoundPlus />
+              </>
+            )}
           </Button>
         )}
       </div>
