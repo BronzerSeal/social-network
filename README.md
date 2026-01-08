@@ -1,59 +1,29 @@
-Social Network - Next.js Social Platform
-https://img.shields.io/badge/Next.js-15.0-black?logo=next.js
-https://img.shields.io/badge/TypeScript-5.0-blue?logo=typescript
-https://img.shields.io/badge/Prisma-ORM-2D3748?logo=prisma
-https://img.shields.io/badge/PostgreSQL-16-4169E1?logo=postgresql
-https://img.shields.io/badge/Tailwind-3.4-38B2AC?logo=tailwind-css
+# 🌐 Social Network (Next.js)
 
-Современная социальная платформа на базе Next.js 15 с полным набором социальных функций: аутентификацией, постами, подписками и платежной системой.
+Современная **социальная платформа**, построенная на **Next.js**, с аутентификацией, постами, подписками и платежами.
 
-✨ Особенности
-🚀 Современный стек: Next.js 15 с App Router и Server Actions
+Проект использует актуальные подходы и технологии: **App Router**, **Server Actions**, **Prisma**, **OAuth**, **YooKassa** и **облачное хранилище файлов**.
 
-🔐 Безопасная аутентификация: Google OAuth + Email Magic Links
+---
 
-💳 Платежная система: Полная интеграция с YooKassa
+## 🚀 Стек технологий
 
-☁️ Облачное хранение: Vercel Blob Storage для медиафайлов
+- **Next.js (App Router)**
+- **React + TypeScript**
+- **Tailwind CSS**
+- **Prisma ORM**
+- **PostgreSQL**
+- **Auth.js (NextAuth v5)**
+- **Google OAuth**
+- **Resend (Email)**
+- **YooKassa**
+- **Vercel Blob Storage**
+- **HeroUI / shadcn/ui**
+- **Zustand**
 
-📱 Адаптивный дизайн: Полностью отзывчивый интерфейс
+---
 
-⚡ Реактивное обновление: Instant UI updates без перезагрузки
-
-🏗️ Архитектура
-text
-┌─────────────────────────────────────────────┐
-│ Frontend (Next.js 15) │
-│ • App Router • Server Components │
-│ • Server Actions • React 18 │
-└──────────────┬──────────────────────────────┘
-│
-┌──────────────▼──────────────────────────────┐
-│ Backend Services │
-│ • Auth.js v5 • Prisma ORM │
-│ • Resend Email • YooKassa API │
-│ • Vercel Blob • PostgreSQL │
-└──────────────┬──────────────────────────────┘
-│
-┌──────────────▼──────────────────────────────┐
-│ External APIs │
-│ • Google OAuth • YooKassa │
-│ • Resend • Vercel Blob │
-└─────────────────────────────────────────────┘
-📦 Технологический стек
-Технология Назначение
-Next.js 15 React-фреймворк с App Router
-TypeScript Статическая типизация
-Prisma ORM Работа с базой данных
-PostgreSQL Основная база данных
-Auth.js v5 Аутентификация и авторизация
-Tailwind CSS Стилизация компонентов
-shadcn/ui UI компоненты
-Zustand Управление состоянием
-Resend Email-рассылки
-YooKassa Платежная система
-Vercel Blob Хранение файлов
-🚀 Быстрый старт
+## 📦 Установка
 
 1. Клонирование репозитория
    bash
@@ -72,198 +42,70 @@ yarn install
 pnpm install 3. Настройка переменных окружения
 Создайте файл .env в корне проекта:
 
-env
+📄 .env
+Создай файл .env в корне проекта:
+DATABASE_URL=
+AUTH_RESEND_KEY=
+RESEND_API_KEY=
+NEXT_PUBLIC_APP_URL=
+YOOKASSA_SHOP_ID=
+YOOKASSA_SECRET_KEY=
+Назначение переменных
+DATABASE_URL — подключение к PostgreSQL (Prisma)
+AUTH_RESEND_KEY — ключ авторизации Resend
+RESEND_API_KEY — API-ключ для email-рассылок
+NEXT_PUBLIC_APP_URL — публичный URL приложения
+YOOKASSA_SHOP_ID — ID магазина YooKassa
+YOOKASSA_SECRET_KEY — секретный ключ YooKassa
 
-# База данных
+📄 .env.local
+Создай файл .env.local:
+AUTH_SECRET=
+AUTH_GOOGLE_ID=
+AUTH_GOOGLE_SECRET=
+BLOB_READ_WRITE_TOKEN=
+Назначение переменных
+AUTH_SECRET — секрет Auth.js (NextAuth v5)
+AUTH_GOOGLE_ID — Google OAuth Client ID
+AUTH_GOOGLE_SECRET — Google OAuth Client Secret
+BLOB_READ_WRITE_TOKEN — токен для Vercel Blob Storage (загрузка файлов)
 
-DATABASE_URL="postgresql://user:password@localhost:5432/social_network"
+🧠 Prisma
 
-# NextAuth
-
-AUTH_SECRET="your-secret-key-here"
-
-# Google OAuth
-
-AUTH_GOOGLE_ID="your-google-client-id"
-AUTH_GOOGLE_SECRET="your-google-client-secret"
-
-# Resend Email
-
-AUTH_RESEND_KEY="your-resend-key"
-RESEND_API_KEY="your-resend-api-key"
-
-# Приложение
-
-NEXT_PUBLIC_APP_URL="http://localhost:3000"
-
-# YooKassa
-
-YOOKASSA_SHOP_ID="your-shop-id"
-YOOKASSA_SECRET_KEY="your-secret-key"
-
-# Vercel Blob Storage
-
-BLOB_READ_WRITE_TOKEN="your-blob-token" 4. Настройка базы данных
-bash
-
-# Генерация Prisma клиента
-
+Перед запуском необходимо инициализировать Prisma:
 npx prisma generate
-
-# Применение миграций
-
 npx prisma migrate dev
 
-# (Опционально) Заполнение тестовыми данными
-
-npx prisma db seed 5. Запуск приложения
-bash
-
-# Разработка
-
+▶️ Запуск проекта
 npm run dev
-
-# Production сборка
-
-npm run build
-npm start
-Приложение будет доступно по адресу: http://localhost:3000
-
-🔐 Аутентификация
-Методы входа:
-Google OAuth - через Auth.js
-
-Email Magic Link - одноразовая ссылка на почту
-
-Сессии - безопасное хранение с JWT
-
-Защита маршрутов:
-typescript
-// Middleware автоматически защищает приватные маршруты
-export { auth as middleware } from "@/auth"
-💳 Платежная система (YooKassa)
-Поддерживаемые функции:
-✅ Создание платежей
-
-✅ Secure 3D-Secure
-
-✅ Возвраты средств
-
-✅ Webhook обработка
-
-✅ История транзакций
-
-Интеграция:
-typescript
-// Создание платежа
-const payment = await yooKassa.createPayment({
-amount: { value: "100.00", currency: "RUB" },
-confirmation: { type: "redirect" },
-description: "Premium подписка"
-});
-📁 Хранение файлов
-Vercel Blob Storage:
-Аватары пользователей - автоматическая оптимизация
-
-Изображения постов - CDN доставка
-
-Документы - безопасное хранение
-
-Пример загрузки:
-typescript
-const blob = await put(file.name, file, {
-access: 'public',
-});
-🧩 Основные функции
-👤 Профиль пользователя
-Кастомизация аватара и информации
-
-Статистика активности
-
-Настройки приватности
-
-📝 Посты и лента
-Создание постов с медиа
-
-Лента на основе подписок
-
-Реакции (лайки, репосты)
-
-Комментарии с ветвлением
-
-🤝 Социальные функции
-Система подписок
-
-Уведомления в реальном времени
-
-Поиск пользователей
-
-Чат (в разработке)
-
-💎 Премиум функции
-Улучшенная аналитика
-
-Расширенные настройки приватности
-
-Уникальные значки
-
-Приоритетная поддержка
-
-📱 Адаптивность
-Устройство Поддержка
-Мобильные ✅ Полная адаптация
-Планшеты ✅ Оптимизированный интерфейс
-Десктоп ✅ Расширенные функции
+Приложение будет доступно по адресу:
+👉 http://localhost:3000
 
 🚀 Деплой
 Vercel (Рекомендуется)
 https://vercel.com/button
 
-🛠️ Команды разработки
-bash
+🔑 Аутентификация
+Google OAuth
+Email Magic Link
+Auth.js (NextAuth v5)
 
-# Запуск в режиме разработки
+💳 Платежи
+Интеграция с YooKassa:
+Создание платежей
+Checkout через confirmation_token
+Серверная обработка статусов платежей
 
-npm run dev
+📁 Хранение файлов
+Используется Vercel Blob Storage:
+Аватары пользователей
+Изображения постов
 
-# Production сборка
-
-npm run build
-
-# Статический анализ кода
-
-npm run lint
-
-# Проверка типов TypeScript
-
-npm run type-check
-
-# Запуск тестов
-
-npm test
-
-# Открытие Prisma Studio
-
-npx prisma studio
-🤝 Вклад в проект
-Форкните репозиторий
-
-Создайте ветку для функции (git checkout -b feature/amazing-feature)
-
-Закоммитьте изменения (git commit -m 'Add amazing feature')
-
-Запушьте в ветку (git push origin feature/amazing-feature)
-
-Откройте Pull Request
-
-📄 Лицензия
-Этот проект распространяется под лицензией MIT. Подробнее см. в файле LICENSE.
-
-📞 Поддержка
-Issues: GitHub Issues
-
-Discord: Наш сервер
-
-Email: support@socialnetwork.com
-
-<div align="center"> <sub>Создано с ❤️ для современного социального взаимодействия</sub> <br> <sub>Если вам нравится проект, поставьте ⭐ на GitHub!</sub> </div>
+🧩 Основной функционал
+👤 Профили пользователей
+📝 Посты и комментарии
+❤️ Лайки
+➕ Подписки
+💳 Платные функции
+🔄 Реактивное обновление данных
+📱 Адаптивный интерфейс
