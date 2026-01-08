@@ -81,7 +81,7 @@ npm run dev
 
 # 🚀 Деплой
 Vercel (Рекомендуется)
-https://vercel.com/button
+[https://vercel.com/button](https://social-network-tau.vercel.app/)
 
 # 🔑 Аутентификация
 Google OAuth
