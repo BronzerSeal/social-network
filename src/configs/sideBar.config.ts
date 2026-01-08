@@ -10,8 +10,8 @@ export const sideBarSectionsConfig = [
     travelUrl: "/feed",
   },
   {
-    title: "Friends",
-    icon: "Contact",
-    travelUrl: "/friends",
+    title: "Upgrade to pro",
+    icon: "BadgeRussianRuble",
+    travelUrl: "/payment",
   },
 ] as const;

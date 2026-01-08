@@ -27,7 +27,6 @@ const UserPage = () => {
   const posts = useUserPosts();
   const postsLoading = useUserPostIsLoading();
   const userLoading = useUserProfileIsLoading();
-  console.log(userLoading);
 
   const pageUser = useProfileUser();
   const { data: session } = useSession();

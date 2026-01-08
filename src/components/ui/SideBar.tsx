@@ -1,7 +1,7 @@
 "use client";
 import { sideBarSectionsConfig } from "@/configs/sideBar.config";
 import { addToast, Listbox, ListboxItem } from "@heroui/react";
-import { Contact, House, UserRoundPen } from "lucide-react";
+import { BadgeRussianRuble, House, UserRoundPen } from "lucide-react";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { JSX } from "react";
@@ -9,7 +9,7 @@ import { JSX } from "react";
 const iconMap: Record<string, JSX.Element> = {
   UserRoundPen: <UserRoundPen />,
   House: <House />,
-  Contact: <Contact />,
+  BadgeRussianRuble: <BadgeRussianRuble />,
 };
 
 export const ListboxWrapper = ({ children }: { children: React.ReactNode }) => (

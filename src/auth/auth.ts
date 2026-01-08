@@ -77,6 +77,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
             image: true,
             dopInfo: true,
             subscriptions: true,
+            proStatus: true,
           },
         });
 
@@ -85,10 +86,14 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         token.image = dbUser?.image;
         token.dopInfo = dbUser?.dopInfo;
         token.subscriptions = dbUser?.subscriptions;
+        token.proStatus = dbUser?.proStatus;
       }
 
       if (trigger === "update" && newSession?.image) {
         token.image = newSession.image;
+      }
+      if (trigger === "update" && newSession?.proStatus) {
+        token.proStatus = newSession.proStatus;
       }
       if (trigger === "update" && newSession?.subscriptions) {
         token.subscriptions = newSession.subscriptions;
@@ -110,6 +115,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         session.user.image = token.image as string;
         session.user.dopInfo = token.dopInfo as string;
         session.user.subscriptions = token.subscriptions as string[];
+        session.user.proStatus = token.proStatus as boolean;
       }
       return session;
     },

@@ -97,7 +97,7 @@ export default function LayoutHeader() {
                 isBordered
                 as="button"
                 className="transition-transform"
-                color="success"
+                color={`${session.user.proStatus ? "warning" : "success"}`}
                 name={session?.user?.name || "user"}
                 size="sm"
                 src={

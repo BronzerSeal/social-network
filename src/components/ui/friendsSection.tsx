@@ -35,10 +35,9 @@ const FriendsSection = ({
       setSubscriptionsData(response);
     }
 
-    getData(); // <-- обязательно вызываем функцию
-  }, [pageUserId]); // зависимость, если pageUserId меняется
+    getData();
+  }, [pageUserId]);
   if (!subscriptions || pageUserId === undefined) return null;
-  console.log(subscriptionsData);
 
   const scrollPrev = () => emblaApi?.scrollPrev();
   const scrollNext = () => emblaApi?.scrollNext();

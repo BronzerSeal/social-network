@@ -11,6 +11,7 @@ declare module "next-auth" {
       image?: string | null;
       dopInfo?: string | null;
       subscriptions: string[];
+      proStatus: boolean;
     } & DefaultSession["user"];
   }
 }

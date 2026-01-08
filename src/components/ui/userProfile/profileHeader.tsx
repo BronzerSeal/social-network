@@ -1,6 +1,6 @@
 "use client";
 import { getAverageColor, getLightenColor } from "@/hooks/getColorsByImg";
-import { addToast, Avatar, Button, useDisclosure } from "@heroui/react";
+import { addToast, Avatar, Button, Chip, useDisclosure } from "@heroui/react";
 import { useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
 import { Settings, UserRoundMinus, UserRoundPlus } from "lucide-react";
@@ -11,7 +11,6 @@ import subscribe from "@/actions/subscribe";
 
 const ProfileHeader = ({ pageUser }: { pageUser: Session["user"] | null }) => {
   const { data: session, update } = useSession();
-  console.log(session);
   const [color, setColor] = useState("136,136,136"); // fallback
   const { isOpen, onOpen, onClose } = useDisclosure();
   const {
@@ -96,7 +95,13 @@ const ProfileHeader = ({ pageUser }: { pageUser: Session["user"] | null }) => {
           <div className="flex flex-col justify-center text-left ml-4">
             <h1 className="font-bold text-2xl drop-shadow-sm">
               {pageUser?.name}
+              {pageUser?.proStatus && (
+                <Chip color="warning" variant="shadow" className="ml-1">
+                  Pro
+                </Chip>
+              )}
             </h1>
+
             <p className="text-[14px] text-gray-500">
               {pageUser?.dopInfo && pageUser?.dopInfo.length > 0
                 ? pageUser?.dopInfo

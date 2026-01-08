@@ -11,7 +11,6 @@ const FeedPage = () => {
   const { data: session } = useSession();
   const posts = usePosts();
   const postsLoading = usePostIsLoading();
-  console.log(posts);
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   if (!session) return <p>unauthorized</p>;

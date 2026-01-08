@@ -57,6 +57,7 @@ model User {
   image         String?
   dopInfo       String?
   subscriptions String[]
+  proStatus     Boolean   @default(false)
 
   likedPosts    UserLikedPost[]
   comments      Comment[]
