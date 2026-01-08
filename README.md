@@ -37,17 +37,17 @@
    или
 pnpm install 3.
 
-Настройка переменных окружения
+# Настройка переменных окружения
 Создайте файл .env в корне проекта:
 
-📄 .env
+# 📄 .env
 Создай файл .env в корне проекта:
-DATABASE_URL=
-AUTH_RESEND_KEY=
-RESEND_API_KEY=
-NEXT_PUBLIC_APP_URL=
-YOOKASSA_SHOP_ID=
-YOOKASSA_SECRET_KEY=
+DATABASE_URL;
+AUTH_RESEND_KEY;
+RESEND_API_KEY;
+NEXT_PUBLIC_APP_URL;
+YOOKASSA_SHOP_ID;
+YOOKASSA_SECRET_KEY;
 Назначение переменных
 DATABASE_URL — подключение к PostgreSQL (Prisma)
 AUTH_RESEND_KEY — ключ авторизации Resend
@@ -56,50 +56,50 @@ NEXT_PUBLIC_APP_URL — публичный URL приложения
 YOOKASSA_SHOP_ID — ID магазина YooKassa
 YOOKASSA_SECRET_KEY — секретный ключ YooKassa
 
-📄 .env.local
+# 📄 .env.local
 Создай файл .env.local:
-AUTH_SECRET=
-AUTH_GOOGLE_ID=
-AUTH_GOOGLE_SECRET=
-BLOB_READ_WRITE_TOKEN=
+AUTH_SECRET;
+AUTH_GOOGLE_ID;
+AUTH_GOOGLE_SECRET;
+BLOB_READ_WRITE_TOKEN;
 Назначение переменных
 AUTH_SECRET — секрет Auth.js (NextAuth v5)
 AUTH_GOOGLE_ID — Google OAuth Client ID
 AUTH_GOOGLE_SECRET — Google OAuth Client Secret
 BLOB_READ_WRITE_TOKEN — токен для Vercel Blob Storage (загрузка файлов)
 
-🧠 Prisma
+# 🧠 Prisma
 
 Перед запуском необходимо инициализировать Prisma:
 npx prisma generate
 npx prisma migrate dev
 
-▶️ Запуск проекта
+# ▶️ Запуск проекта
 npm run dev
 Приложение будет доступно по адресу:
 👉 http://localhost:3000
 
-🚀 Деплой
+# 🚀 Деплой
 Vercel (Рекомендуется)
 https://vercel.com/button
 
-🔑 Аутентификация
+# 🔑 Аутентификация
 Google OAuth
 Email Magic Link
 Auth.js (NextAuth v5)
 
-💳 Платежи
+# 💳 Платежи
 Интеграция с YooKassa:
 Создание платежей
 Checkout через confirmation_token
 Серверная обработка статусов платежей
 
-📁 Хранение файлов
+# 📁 Хранение файлов
 Используется Vercel Blob Storage:
 Аватары пользователей
 Изображения постов
 
-🧩 Основной функционал
+# 🧩 Основной функционал
 👤 Профили пользователей
 📝 Посты и комментарии
 ❤️ Лайки
