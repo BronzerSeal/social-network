@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 
 test.describe("loginForm e2e tests", () => {
-  test.only("authorization test", async ({ page }) => {
+  test("authorization test", async ({ page }) => {
     page.goto("http://localhost:3000/");
 
     await page.getByPlaceholder("email").click();

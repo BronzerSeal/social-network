@@ -50,9 +50,9 @@ export async function POST(req: NextRequest) {
       const name = formData.get("name") as string;
       const dopInfo = formData.get("dopInfo") as string;
 
-      if (!name || !dopInfo) {
+      if (!name) {
         return NextResponse.json(
-          { message: "No name/dopInfo provided" },
+          { message: "No name provided" },
           { status: 400 }
         );
       }

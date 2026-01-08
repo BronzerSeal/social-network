@@ -110,6 +110,7 @@ const ProfileHeader = ({ pageUser }: { pageUser: Session["user"] | null }) => {
             color="primary"
             className="h-12 cursor-pointer flex items-center justify-center group"
             onPress={() => onUserInfoOpen()}
+            data-testid="settings"
           >
             <Settings className="transition-transform duration-300 ease-in-out group-hover:rotate-90" />
           </Button>

@@ -62,6 +62,7 @@ const FriendsSection = ({
                   key={sub.id}
                   className="shrink-0 cursor-pointer"
                   onClick={() => router.push(`/user/${sub.id}`)}
+                  data-testid="friendAvatar"
                 >
                   <Tooltip content={sub.name}>
                     <Avatar size="lg" src={sub.image} name={sub.name} />

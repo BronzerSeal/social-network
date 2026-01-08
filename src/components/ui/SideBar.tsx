@@ -1,6 +1,6 @@
 "use client";
 import { sideBarSectionsConfig } from "@/configs/sideBar.config";
-import { Listbox, ListboxItem } from "@heroui/react";
+import { addToast, Listbox, ListboxItem } from "@heroui/react";
 import { Contact, House, UserRoundPen } from "lucide-react";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
@@ -30,6 +30,11 @@ const SideBar = () => {
             key={section.title}
             startContent={iconMap[section.icon] || <></>}
             onClick={() => {
+              if (!session)
+                return addToast({
+                  title: "Log in to use",
+                  color: "danger",
+                });
               if (section.travelUrl === "/user") {
                 router.push(`${section.travelUrl}/${session?.user.id}`);
               } else {

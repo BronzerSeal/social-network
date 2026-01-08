@@ -60,7 +60,7 @@ test.describe("interact with post tests", () => {
     await expect(page.getByText(`Test post-${randomTestNum}`)).toHaveCount(0);
   });
 
-  test.only("interact with post", async ({ page }) => {
+  test("interact with post", async ({ page }) => {
     await page.getByRole("button", { name: "Create new post" }).click();
 
     await page.getByRole("textbox", { name: "Write something" }).fill("");
