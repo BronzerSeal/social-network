@@ -24,23 +24,23 @@
 ---
 
 ## 📦 Установка
-
+```
 1. Клонирование репозитория
-   bash
    git clone https://github.com/your-username/social-network.git
    cd social-network
 2. Установка зависимостей
-   bash
    npm install
    или
    yarn install
    или
-pnpm install 3.
+   pnpm install 3.
+```
 
 # Настройка переменных окружения
 Создайте файл .env в корне проекта:
 
 # 📄 .env
+```
 Создай файл .env в корне проекта:
 DATABASE_URL;
 AUTH_RESEND_KEY;
@@ -55,8 +55,10 @@ RESEND_API_KEY — API-ключ для email-рассылок
 NEXT_PUBLIC_APP_URL — публичный URL приложения
 YOOKASSA_SHOP_ID — ID магазина YooKassa
 YOOKASSA_SECRET_KEY — секретный ключ YooKassa
+```
 
 # 📄 .env.local
+```
 Создай файл .env.local:
 AUTH_SECRET;
 AUTH_GOOGLE_ID;
@@ -67,6 +69,7 @@ AUTH_SECRET — секрет Auth.js (NextAuth v5)
 AUTH_GOOGLE_ID — Google OAuth Client ID
 AUTH_GOOGLE_SECRET — Google OAuth Client Secret
 BLOB_READ_WRITE_TOKEN — токен для Vercel Blob Storage (загрузка файлов)
+```
 
 # 🧠 Prisma
 
