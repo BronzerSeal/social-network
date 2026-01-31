@@ -2,7 +2,11 @@ import { pageUrls } from "@/configs/pageUrls.config";
 import { Image } from "@heroui/react";
 import { signIn } from "next-auth/react";
 
-export default function GoogleEnter() {
+export default function GoogleEnter({
+  text = "Enter with Google",
+}: {
+  text?: string;
+}) {
   const handleGoogleSignIn = () => {
     signIn("google", {
       callbackUrl: pageUrls.feedPage,
@@ -18,7 +22,7 @@ export default function GoogleEnter() {
         width={23}
         height={23}
       />
-      <div>Enter with Google</div>
+      <div>{text}</div>
     </div>
   );
 }
