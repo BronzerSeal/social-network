@@ -1,0 +1,1493 @@
+
+> social-network@0.1.0 build-storybook
+> storybook build --output-dir=C:\Users\cio\AppData\Local\Temp\chromatic--12028-HnNPu4NyYDmc
+
+
+[90m┌[39m  Building storybook v10.1.11
+[90m│[39m
+[32m◇[39m  Cleaning outputDir:
+[90m│[39m  [36m../../../../AppData/Local/Temp/chromatic--12028-HnNPu4NyYDmc[39m
+[90m│[39m
+[32m◇[39m  Loading presets
+[90m│[39m
+[32m◇[39m  Building manager..
+[90m│[39m
+[34m●[39m  Building preview..
+[90m│[39m
+[33m▲[39m  No story files found for the specified pattern: [34msrc\**\*.mdx[39m
+[90m│[39m
+[34m●[39m  Copying static files: [36mpublic[39m at
+[90m│[39m  [36m..\..\..\..\AppData\Local\Temp\chromatic--12028-HnNPu4NyYDmc[39m
+[90m│[39m  [43mVite[49m [36mvite v7.3.1 [32mbuilding client environment for production...[36m[39m
+[90m│[39m  [43mVite[49m transforming...
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/next-auth/react.js (1:0): Module level directives[39m
+[90m│[39m  [33mcause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/next-auth/react.js" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/system/dist/index.mjs (1:0): Module level[39m
+[90m│[39m  [33mdirectives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/system/dist/index.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/badge/dist/index.mjs (1:0): Module level[39m
+[90m│[39m  [33mdirectives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/badge/dist/index.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/accordion/dist/index.mjs (1:0): Module level[39m
+[90m│[39m  [33mdirectives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/accordion/dist/index.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/card/dist/index.mjs (1:0): Module level[39m
+[90m│[39m  [33mdirectives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/card/dist/index.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/avatar/dist/index.mjs (1:0): Module level[39m
+[90m│[39m  [33mdirectives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/avatar/dist/index.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/chip/dist/index.mjs (1:0): Module level[39m
+[90m│[39m  [33mdirectives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/chip/dist/index.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/link/dist/index.mjs (1:0): Module level[39m
+[90m│[39m  [33mdirectives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/link/dist/index.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/checkbox/dist/index.mjs (1:0): Module level[39m
+[90m│[39m  [33mdirectives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/checkbox/dist/index.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/button/dist/index.mjs (1:0): Module level[39m
+[90m│[39m  [33mdirectives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/button/dist/index.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/radio/dist/index.mjs (1:0): Module level[39m
+[90m│[39m  [33mdirectives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/radio/dist/index.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/snippet/dist/index.mjs (1:0): Module level[39m
+[90m│[39m  [33mdirectives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/snippet/dist/index.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/spinner/dist/index.mjs (1:0): Module level[39m
+[90m│[39m  [33mdirectives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/spinner/dist/index.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/tooltip/dist/index.mjs (1:0): Module level[39m
+[90m│[39m  [33mdirectives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/tooltip/dist/index.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/input/dist/index.mjs (1:0): Module level[39m
+[90m│[39m  [33mdirectives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/input/dist/index.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/user/dist/index.mjs (1:0): Module level[39m
+[90m│[39m  [33mdirectives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/user/dist/index.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/switch/dist/index.mjs (1:0): Module level[39m
+[90m│[39m  [33mdirectives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/switch/dist/index.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/progress/dist/index.mjs (1:0): Module level[39m
+[90m│[39m  [33mdirectives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/progress/dist/index.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/popover/dist/index.mjs (1:0): Module level[39m
+[90m│[39m  [33mdirectives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/popover/dist/index.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/pagination/dist/index.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/pagination/dist/index.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/dropdown/dist/index.mjs (1:0): Module level[39m
+[90m│[39m  [33mdirectives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/dropdown/dist/index.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/modal/dist/index.mjs (1:0): Module level[39m
+[90m│[39m  [33mdirectives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/modal/dist/index.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/image/dist/index.mjs (1:0): Module level[39m
+[90m│[39m  [33mdirectives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/image/dist/index.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/table/dist/index.mjs (1:0): Module level[39m
+[90m│[39m  [33mdirectives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/table/dist/index.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/tabs/dist/index.mjs (1:0): Module level[39m
+[90m│[39m  [33mdirectives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/tabs/dist/index.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/navbar/dist/index.mjs (1:0): Module level[39m
+[90m│[39m  [33mdirectives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/navbar/dist/index.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/skeleton/dist/index.mjs (1:0): Module level[39m
+[90m│[39m  [33mdirectives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/skeleton/dist/index.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/scroll-shadow/dist/index.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/scroll-shadow/dist/index.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/listbox/dist/index.mjs (1:0): Module level[39m
+[90m│[39m  [33mdirectives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/listbox/dist/index.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/ripple/dist/index.mjs (1:0): Module level[39m
+[90m│[39m  [33mdirectives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/ripple/dist/index.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/select/dist/index.mjs (1:0): Module level[39m
+[90m│[39m  [33mdirectives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/select/dist/index.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/menu/dist/index.mjs (1:0): Module level[39m
+[90m│[39m  [33mdirectives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/menu/dist/index.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/breadcrumbs/dist/index.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/breadcrumbs/dist/index.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/slider/dist/index.mjs (1:0): Module level[39m
+[90m│[39m  [33mdirectives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/slider/dist/index.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/autocomplete/dist/index.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/autocomplete/dist/index.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/calendar/dist/index.mjs (1:0): Module level[39m
+[90m│[39m  [33mdirectives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/calendar/dist/index.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/date-input/dist/index.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/date-input/dist/index.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/date-picker/dist/index.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/date-picker/dist/index.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/form/dist/index.mjs (1:0): Module level[39m
+[90m│[39m  [33mdirectives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/form/dist/index.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/input-otp/dist/index.mjs (1:0): Module level[39m
+[90m│[39m  [33mdirectives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/input-otp/dist/index.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/number-input/dist/index.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/number-input/dist/index.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/alert/dist/index.mjs (1:0): Module level[39m
+[90m│[39m  [33mdirectives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/alert/dist/index.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/drawer/dist/index.mjs (1:0): Module level[39m
+[90m│[39m  [33mdirectives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/drawer/dist/index.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/toast/dist/index.mjs (1:0): Module level[39m
+[90m│[39m  [33mdirectives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/toast/dist/index.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/framer-utils/dist/index.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/framer-utils/dist/index.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/next-auth/lib/client.js (1:0): Module level[39m
+[90m│[39m  [33mdirectives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/next-auth/lib/client.js" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/system/dist/chunk-GR3VEF4M.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/system/dist/chunk-GR3VEF4M.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/system/dist/chunk-3KFOFPK7.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/system/dist/chunk-3KFOFPK7.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/system/dist/chunk-FPAGUVYU.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/system/dist/chunk-FPAGUVYU.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/system/dist/chunk-Q3W45BN5.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/system/dist/chunk-Q3W45BN5.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/badge/dist/chunk-TLGNVWIG.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/badge/dist/chunk-TLGNVWIG.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/badge/dist/chunk-ESVUYDZQ.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/badge/dist/chunk-ESVUYDZQ.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/accordion/dist/chunk-P43IVKP7.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/accordion/dist/chunk-P43IVKP7.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/accordion/dist/chunk-HAJUSXOG.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/accordion/dist/chunk-HAJUSXOG.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/accordion/dist/chunk-S4YBHMUB.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/accordion/dist/chunk-S4YBHMUB.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/accordion/dist/chunk-E5ZPQ6WL.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/accordion/dist/chunk-E5ZPQ6WL.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/card/dist/chunk-LGSBTEIA.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/card/dist/chunk-LGSBTEIA.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/card/dist/chunk-D5XJWRAV.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/card/dist/chunk-D5XJWRAV.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/card/dist/chunk-O24IAYCG.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/card/dist/chunk-O24IAYCG.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/card/dist/chunk-XHGGCEVJ.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/card/dist/chunk-XHGGCEVJ.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/card/dist/chunk-TE6SZS6W.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/card/dist/chunk-TE6SZS6W.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/card/dist/chunk-DHMIPUUY.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/card/dist/chunk-DHMIPUUY.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/avatar/dist/chunk-DPUNBZPN.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/avatar/dist/chunk-DPUNBZPN.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/avatar/dist/chunk-25E6VDTZ.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/avatar/dist/chunk-25E6VDTZ.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/avatar/dist/chunk-JUJ53SJZ.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/avatar/dist/chunk-JUJ53SJZ.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/avatar/dist/chunk-VWM2HFFA.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/avatar/dist/chunk-VWM2HFFA.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/chip/dist/chunk-IHOGUXIG.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/chip/dist/chunk-IHOGUXIG.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/avatar/dist/chunk-QH65JCLF.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/avatar/dist/chunk-QH65JCLF.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/avatar/dist/chunk-5OQ5EBOM.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/avatar/dist/chunk-5OQ5EBOM.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/chip/dist/chunk-N45CR57R.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/chip/dist/chunk-N45CR57R.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/checkbox/dist/chunk-ITDNPVX3.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/checkbox/dist/chunk-ITDNPVX3.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/link/dist/chunk-JOT4BT4P.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/link/dist/chunk-JOT4BT4P.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/link/dist/chunk-7LH7ZARU.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/link/dist/chunk-7LH7ZARU.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/link/dist/chunk-OYJP4FUH.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/link/dist/chunk-OYJP4FUH.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/checkbox/dist/chunk-XJ2YRSUP.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/checkbox/dist/chunk-XJ2YRSUP.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/checkbox/dist/chunk-FFVF7OUL.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/checkbox/dist/chunk-FFVF7OUL.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/checkbox/dist/chunk-LK575OWX.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/checkbox/dist/chunk-LK575OWX.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/checkbox/dist/chunk-LLMGIUXO.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/checkbox/dist/chunk-LLMGIUXO.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/button/dist/chunk-57V4RE7B.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/button/dist/chunk-57V4RE7B.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/button/dist/chunk-WBUKVQRU.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/button/dist/chunk-WBUKVQRU.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/button/dist/chunk-6XRBX2TW.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/button/dist/chunk-6XRBX2TW.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/radio/dist/chunk-ERF42GR7.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/radio/dist/chunk-ERF42GR7.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/button/dist/chunk-REKYGLAJ.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/button/dist/chunk-REKYGLAJ.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/radio/dist/chunk-IRK6BJWJ.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/radio/dist/chunk-IRK6BJWJ.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/button/dist/chunk-3SAWKTTV.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/button/dist/chunk-3SAWKTTV.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/checkbox/dist/chunk-VBM6YDUQ.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/checkbox/dist/chunk-VBM6YDUQ.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/radio/dist/chunk-EJJT6KNY.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/radio/dist/chunk-EJJT6KNY.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/radio/dist/chunk-A5ZCUROT.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/radio/dist/chunk-A5ZCUROT.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/radio/dist/chunk-HO6GG4EN.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/radio/dist/chunk-HO6GG4EN.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/snippet/dist/chunk-UD35SZSW.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/snippet/dist/chunk-UD35SZSW.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/snippet/dist/chunk-VHMYBPCH.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/snippet/dist/chunk-VHMYBPCH.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/spinner/dist/chunk-IKKYW34A.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/spinner/dist/chunk-IKKYW34A.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/tooltip/dist/chunk-5B7GRQND.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/tooltip/dist/chunk-5B7GRQND.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/spinner/dist/chunk-MSDKUXDP.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/spinner/dist/chunk-MSDKUXDP.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/input/dist/chunk-SSA7SXE4.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/input/dist/chunk-SSA7SXE4.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/user/dist/chunk-LQEXJ6LU.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/user/dist/chunk-LQEXJ6LU.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/input/dist/chunk-QESP63UR.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/input/dist/chunk-QESP63UR.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/switch/dist/chunk-TQNYOUFX.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/switch/dist/chunk-TQNYOUFX.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/input/dist/chunk-B74GOECG.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/input/dist/chunk-B74GOECG.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/progress/dist/chunk-XVMALT6H.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/progress/dist/chunk-XVMALT6H.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/switch/dist/chunk-IFEUFDHO.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/switch/dist/chunk-IFEUFDHO.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/progress/dist/chunk-3W7Y7B3B.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/progress/dist/chunk-3W7Y7B3B.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/progress/dist/chunk-YUBOGKT4.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/progress/dist/chunk-YUBOGKT4.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/progress/dist/chunk-Z2ODYSHN.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/progress/dist/chunk-Z2ODYSHN.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/user/dist/chunk-S574QCAN.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/user/dist/chunk-S574QCAN.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/popover/dist/chunk-6FXDB7ZT.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/popover/dist/chunk-6FXDB7ZT.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/popover/dist/chunk-CGIRYUEE.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/popover/dist/chunk-CGIRYUEE.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/popover/dist/chunk-HGFRVVZK.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/popover/dist/chunk-HGFRVVZK.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/popover/dist/chunk-QWTMPRXH.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/popover/dist/chunk-QWTMPRXH.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/pagination/dist/chunk-KLIPPDN4.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/pagination/dist/chunk-KLIPPDN4.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/pagination/dist/chunk-APIAPHLK.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/pagination/dist/chunk-APIAPHLK.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/popover/dist/chunk-7N5ZXA6H.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/popover/dist/chunk-7N5ZXA6H.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/pagination/dist/chunk-AQ7H3LB5.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/pagination/dist/chunk-AQ7H3LB5.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/dropdown/dist/chunk-4LJ2IKXJ.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/dropdown/dist/chunk-4LJ2IKXJ.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/dropdown/dist/chunk-UIQ4674R.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/dropdown/dist/chunk-UIQ4674R.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/pagination/dist/chunk-DSTL7ZRK.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/pagination/dist/chunk-DSTL7ZRK.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/pagination/dist/chunk-CNAEJLFQ.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/pagination/dist/chunk-CNAEJLFQ.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/dropdown/dist/chunk-XHRYXXZA.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/dropdown/dist/chunk-XHRYXXZA.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/dropdown/dist/chunk-BV7BCS3N.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/dropdown/dist/chunk-BV7BCS3N.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/modal/dist/chunk-FOPEYBSC.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/modal/dist/chunk-FOPEYBSC.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/dropdown/dist/chunk-RLCA5XPT.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/dropdown/dist/chunk-RLCA5XPT.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/modal/dist/chunk-O5MCAK4F.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/modal/dist/chunk-O5MCAK4F.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/modal/dist/chunk-I7NTTF2N.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/modal/dist/chunk-I7NTTF2N.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/modal/dist/chunk-UKLRQS27.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/modal/dist/chunk-UKLRQS27.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/modal/dist/chunk-IGSAU2ZA.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/modal/dist/chunk-IGSAU2ZA.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/modal/dist/chunk-CWPHHQ5O.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/modal/dist/chunk-CWPHHQ5O.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/image/dist/chunk-VKNWGH3N.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/image/dist/chunk-VKNWGH3N.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/modal/dist/chunk-UX6VCJJD.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/modal/dist/chunk-UX6VCJJD.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/image/dist/chunk-BHGNW4BO.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/image/dist/chunk-BHGNW4BO.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/table/dist/chunk-S6VICFMP.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/table/dist/chunk-S6VICFMP.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/table/dist/chunk-LSK6ZGMB.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/table/dist/chunk-LSK6ZGMB.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/table/dist/chunk-XELIGTI4.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/table/dist/chunk-XELIGTI4.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/table/dist/chunk-YQRLDUCT.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/table/dist/chunk-YQRLDUCT.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/table/dist/chunk-NSERPD52.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/table/dist/chunk-NSERPD52.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/table/dist/chunk-TSPNSPCL.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/table/dist/chunk-TSPNSPCL.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/table/dist/chunk-6QNXQNN7.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/table/dist/chunk-6QNXQNN7.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/table/dist/chunk-F3UDT23P.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/table/dist/chunk-F3UDT23P.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/table/dist/chunk-SU3P7OYB.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/table/dist/chunk-SU3P7OYB.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/table/dist/chunk-FKPXBCGS.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/table/dist/chunk-FKPXBCGS.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/table/dist/chunk-CIL4Y7FA.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/table/dist/chunk-CIL4Y7FA.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/table/dist/chunk-LNVX26OF.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/table/dist/chunk-LNVX26OF.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/table/dist/chunk-IAFUOJEK.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/table/dist/chunk-IAFUOJEK.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/table/dist/chunk-UWYZDOES.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/table/dist/chunk-UWYZDOES.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/table/dist/chunk-YRZGWF2W.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/table/dist/chunk-YRZGWF2W.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/table/dist/chunk-SAU5MAVM.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/table/dist/chunk-SAU5MAVM.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/table/dist/chunk-CKWQQGXG.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/table/dist/chunk-CKWQQGXG.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/tabs/dist/chunk-ZXXSKA4X.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/tabs/dist/chunk-ZXXSKA4X.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/tabs/dist/chunk-YH5X7GEZ.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/tabs/dist/chunk-YH5X7GEZ.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/table/dist/chunk-UHE3PMQE.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/table/dist/chunk-UHE3PMQE.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/tabs/dist/chunk-CKB6C2XL.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/tabs/dist/chunk-CKB6C2XL.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/navbar/dist/chunk-RRUQIZLR.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/navbar/dist/chunk-RRUQIZLR.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/tabs/dist/chunk-DIYF44QK.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/tabs/dist/chunk-DIYF44QK.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/tabs/dist/chunk-ML27DD5T.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/tabs/dist/chunk-ML27DD5T.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/navbar/dist/chunk-UYTDJMPP.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/navbar/dist/chunk-UYTDJMPP.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/navbar/dist/chunk-Q3XKXXMH.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/navbar/dist/chunk-Q3XKXXMH.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/navbar/dist/chunk-4DMBHLGU.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/navbar/dist/chunk-4DMBHLGU.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/navbar/dist/chunk-IGERPFKH.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/navbar/dist/chunk-IGERPFKH.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/navbar/dist/chunk-5LMKFFWA.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/navbar/dist/chunk-5LMKFFWA.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/navbar/dist/chunk-HAU6HCV4.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/navbar/dist/chunk-HAU6HCV4.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/navbar/dist/chunk-W4R67QGI.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/navbar/dist/chunk-W4R67QGI.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/navbar/dist/chunk-UJDFI5KD.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/navbar/dist/chunk-UJDFI5KD.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/skeleton/dist/chunk-TLYTI3QM.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/skeleton/dist/chunk-TLYTI3QM.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/skeleton/dist/chunk-XB6FZTQR.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/skeleton/dist/chunk-XB6FZTQR.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/scroll-shadow/dist/chunk-4EXC76WE.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/scroll-shadow/dist/chunk-4EXC76WE.mjs" was[39m
+[90m│[39m  [33mignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/listbox/dist/chunk-BJFJ4DRR.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/listbox/dist/chunk-BJFJ4DRR.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/scroll-shadow/dist/chunk-XKHEX3UH.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/scroll-shadow/dist/chunk-XKHEX3UH.mjs" was[39m
+[90m│[39m  [33mignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/listbox/dist/chunk-ANTZPR32.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/listbox/dist/chunk-ANTZPR32.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/listbox/dist/chunk-CLI57HS2.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/listbox/dist/chunk-CLI57HS2.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/listbox/dist/chunk-4QJLEUWX.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/listbox/dist/chunk-4QJLEUWX.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/listbox/dist/chunk-MZOWMNSQ.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/listbox/dist/chunk-MZOWMNSQ.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/listbox/dist/chunk-65JTUBIW.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/listbox/dist/chunk-65JTUBIW.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/listbox/dist/chunk-7UIGGLV2.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/listbox/dist/chunk-7UIGGLV2.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/listbox/dist/chunk-BXSPTCK3.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/listbox/dist/chunk-BXSPTCK3.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/ripple/dist/chunk-6VC6TS2O.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/ripple/dist/chunk-6VC6TS2O.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/listbox/dist/chunk-RMKUVOBG.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/listbox/dist/chunk-RMKUVOBG.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/select/dist/chunk-EYCVA6TZ.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/select/dist/chunk-EYCVA6TZ.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/select/dist/chunk-Y2AYO5NJ.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/select/dist/chunk-Y2AYO5NJ.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/menu/dist/chunk-X7MTWOQW.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/menu/dist/chunk-X7MTWOQW.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/menu/dist/chunk-S2PFALES.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/menu/dist/chunk-S2PFALES.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/menu/dist/chunk-QI3I5O2R.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/menu/dist/chunk-QI3I5O2R.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/menu/dist/chunk-PH6GUD27.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/menu/dist/chunk-PH6GUD27.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/menu/dist/chunk-TQG5LBAQ.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/menu/dist/chunk-TQG5LBAQ.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/select/dist/chunk-XAZU4BXN.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/select/dist/chunk-XAZU4BXN.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/menu/dist/chunk-O3ZSXC63.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/menu/dist/chunk-O3ZSXC63.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/menu/dist/chunk-7C7K3AST.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/menu/dist/chunk-7C7K3AST.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/menu/dist/chunk-BIY4SM4Z.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/menu/dist/chunk-BIY4SM4Z.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/breadcrumbs/dist/chunk-Z3AQIG6P.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/breadcrumbs/dist/chunk-Z3AQIG6P.mjs" was[39m
+[90m│[39m  [33mignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/breadcrumbs/dist/chunk-K2YX6XBQ.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/breadcrumbs/dist/chunk-K2YX6XBQ.mjs" was[39m
+[90m│[39m  [33mignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/breadcrumbs/dist/chunk-YK2W3VMR.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/breadcrumbs/dist/chunk-YK2W3VMR.mjs" was[39m
+[90m│[39m  [33mignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/slider/dist/chunk-EUS52Q2W.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/slider/dist/chunk-EUS52Q2W.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/breadcrumbs/dist/chunk-EFAVPTHK.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/breadcrumbs/dist/chunk-EFAVPTHK.mjs" was[39m
+[90m│[39m  [33mignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/slider/dist/chunk-JWATDH3I.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/slider/dist/chunk-JWATDH3I.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/slider/dist/chunk-Y2LHSSQA.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/slider/dist/chunk-Y2LHSSQA.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/slider/dist/chunk-KAWYWWSG.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/slider/dist/chunk-KAWYWWSG.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/calendar/dist/chunk-EAHHUGW3.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/calendar/dist/chunk-EAHHUGW3.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/calendar/dist/chunk-XTI4J63B.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/calendar/dist/chunk-XTI4J63B.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/calendar/dist/chunk-IQQLLVU6.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/calendar/dist/chunk-IQQLLVU6.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/autocomplete/dist/chunk-IQYJV2AF.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/autocomplete/dist/chunk-IQYJV2AF.mjs" was[39m
+[90m│[39m  [33mignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/autocomplete/dist/chunk-DM2TGBNX.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/autocomplete/dist/chunk-DM2TGBNX.mjs" was[39m
+[90m│[39m  [33mignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/calendar/dist/chunk-43O4VXA5.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/calendar/dist/chunk-43O4VXA5.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/calendar/dist/chunk-MUYVZHWM.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/calendar/dist/chunk-MUYVZHWM.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/calendar/dist/chunk-JH6U4LUG.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/calendar/dist/chunk-JH6U4LUG.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/calendar/dist/chunk-OLO3H5VL.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/calendar/dist/chunk-OLO3H5VL.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/calendar/dist/chunk-JJRY4BYN.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/calendar/dist/chunk-JJRY4BYN.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/calendar/dist/chunk-HUKPVIZ5.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/calendar/dist/chunk-HUKPVIZ5.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/calendar/dist/chunk-CXEM7SJO.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/calendar/dist/chunk-CXEM7SJO.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/calendar/dist/chunk-C4FCJFTK.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/calendar/dist/chunk-C4FCJFTK.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/calendar/dist/chunk-WIPJRI2X.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/calendar/dist/chunk-WIPJRI2X.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/calendar/dist/chunk-HWD6BOXP.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/calendar/dist/chunk-HWD6BOXP.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/calendar/dist/chunk-FLUGWORV.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/calendar/dist/chunk-FLUGWORV.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/date-input/dist/chunk-QUNOTK5Q.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/date-input/dist/chunk-QUNOTK5Q.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/calendar/dist/chunk-GMUTP6H4.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/calendar/dist/chunk-GMUTP6H4.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/calendar/dist/chunk-5CY7DCRB.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/calendar/dist/chunk-5CY7DCRB.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/date-input/dist/chunk-URM6S66B.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/date-input/dist/chunk-URM6S66B.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/date-input/dist/chunk-O7G36RA4.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/date-input/dist/chunk-O7G36RA4.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/calendar/dist/chunk-PEV3D27N.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/calendar/dist/chunk-PEV3D27N.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/date-input/dist/chunk-LUAXTAMZ.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/date-input/dist/chunk-LUAXTAMZ.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/date-input/dist/chunk-TRVM74OB.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/date-input/dist/chunk-TRVM74OB.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/date-input/dist/chunk-P37PTL2G.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/date-input/dist/chunk-P37PTL2G.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/date-picker/dist/chunk-CGPY4E4O.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/date-picker/dist/chunk-CGPY4E4O.mjs" was[39m
+[90m│[39m  [33mignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/date-picker/dist/chunk-W4BXUVKJ.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/date-picker/dist/chunk-W4BXUVKJ.mjs" was[39m
+[90m│[39m  [33mignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/date-input/dist/chunk-OXNFYZ2O.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/date-input/dist/chunk-OXNFYZ2O.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/date-picker/dist/chunk-43UGHTS3.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/date-picker/dist/chunk-43UGHTS3.mjs" was[39m
+[90m│[39m  [33mignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/date-picker/dist/chunk-Q6W462HR.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/date-picker/dist/chunk-Q6W462HR.mjs" was[39m
+[90m│[39m  [33mignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/form/dist/chunk-ICU6NNET.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/form/dist/chunk-ICU6NNET.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/form/dist/chunk-GVH3SVCP.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/form/dist/chunk-GVH3SVCP.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/date-picker/dist/chunk-WE6HJLWI.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/date-picker/dist/chunk-WE6HJLWI.mjs" was[39m
+[90m│[39m  [33mignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/date-picker/dist/chunk-H6JRZSZQ.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/date-picker/dist/chunk-H6JRZSZQ.mjs" was[39m
+[90m│[39m  [33mignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/input-otp/dist/chunk-2357QUJK.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/input-otp/dist/chunk-2357QUJK.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/form/dist/chunk-YMDFNRVV.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/form/dist/chunk-YMDFNRVV.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/input-otp/dist/chunk-O7QGD4OK.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/input-otp/dist/chunk-O7QGD4OK.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/input-otp/dist/chunk-6IRH5EFF.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/input-otp/dist/chunk-6IRH5EFF.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/input-otp/dist/chunk-J2DLM746.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/input-otp/dist/chunk-J2DLM746.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/alert/dist/chunk-OLUJUNJU.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/alert/dist/chunk-OLUJUNJU.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/number-input/dist/chunk-HVA7EZPG.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/number-input/dist/chunk-HVA7EZPG.mjs" was[39m
+[90m│[39m  [33mignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/number-input/dist/chunk-IVUZTASD.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/number-input/dist/chunk-IVUZTASD.mjs" was[39m
+[90m│[39m  [33mignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/drawer/dist/chunk-3T5MLG3K.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/drawer/dist/chunk-3T5MLG3K.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/number-input/dist/chunk-TMGPIYV6.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/number-input/dist/chunk-TMGPIYV6.mjs" was[39m
+[90m│[39m  [33mignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/alert/dist/chunk-GPJD3EQZ.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/alert/dist/chunk-GPJD3EQZ.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/drawer/dist/chunk-DULHZX7T.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/drawer/dist/chunk-DULHZX7T.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/toast/dist/chunk-JTU5EY7X.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/toast/dist/chunk-JTU5EY7X.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/framer-utils/dist/chunk-54L3M2TC.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/framer-utils/dist/chunk-54L3M2TC.mjs" was[39m
+[90m│[39m  [33mignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/framer-utils/dist/chunk-736YWA4T.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/framer-utils/dist/chunk-736YWA4T.mjs" was[39m
+[90m│[39m  [33mignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/react-utils/dist/index.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/react-utils/dist/index.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/aria-utils/dist/index.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/aria-utils/dist/index.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/dom-animation/dist/index.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/dom-animation/dist/index.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/toast/dist/src-UW24ZMRV.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/toast/dist/src-UW24ZMRV.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m
+[90m│[39m  [33mnode_modules/framer-motion/dist/es/components/AnimatePresence/PopChild.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min[39m
+[90m│[39m  [33m"node_modules/framer-motion/dist/es/components/AnimatePresence/PopChild.mjs"[39m
+[90m│[39m  [33mwas ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m
+[90m│[39m  [33mnode_modules/framer-motion/dist/es/components/AnimatePresence/PresenceChild.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min[39m
+[90m│[39m  [33m"node_modules/framer-motion/dist/es/components/AnimatePresence/PresenceChild.mjs"[39m
+[90m│[39m  [33mwas ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m
+[90m│[39m  [33mnode_modules/framer-motion/dist/es/components/MotionConfig/index.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min[39m
+[90m│[39m  [33m"node_modules/framer-motion/dist/es/components/MotionConfig/index.mjs"[39m
+[90m│[39m  [33mwas ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m
+[90m│[39m  [33mnode_modules/framer-motion/dist/es/components/LayoutGroup/index.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min[39m
+[90m│[39m  [33m"node_modules/framer-motion/dist/es/components/LayoutGroup/index.mjs"[39m
+[90m│[39m  [33mwas ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m
+[90m│[39m  [33mnode_modules/framer-motion/dist/es/components/LazyMotion/index.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min[39m
+[90m│[39m  [33m"node_modules/framer-motion/dist/es/components/LazyMotion/index.mjs"[39m
+[90m│[39m  [33mwas ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/framer-motion/dist/es/utils/use-force-update.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min "node_modules/framer-motion/dist/es/utils/use-force-update.mjs" was[39m
+[90m│[39m  [33mignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/framer-motion/dist/es/utils/use-unmount-effect.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min "node_modules/framer-motion/dist/es/utils/use-unmount-effect.mjs"[39m
+[90m│[39m  [33mwas ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m
+[90m│[39m  [33mnode_modules/framer-motion/dist/es/utils/use-isomorphic-effect.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min[39m
+[90m│[39m  [33m"node_modules/framer-motion/dist/es/utils/use-isomorphic-effect.mjs"[39m
+[90m│[39m  [33mwas ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/framer-motion/dist/es/render/dom/features-max.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min "node_modules/framer-motion/dist/es/render/dom/features-max.mjs"[39m
+[90m│[39m  [33mwas ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/framer-motion/dist/es/render/dom/features-min.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min "node_modules/framer-motion/dist/es/render/dom/features-min.mjs"[39m
+[90m│[39m  [33mwas ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m
+[90m│[39m  [33mnode_modules/framer-motion/dist/es/motion/utils/use-visual-state.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min[39m
+[90m│[39m  [33m"node_modules/framer-motion/dist/es/motion/utils/use-visual-state.mjs"[39m
+[90m│[39m  [33mwas ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m
+[90m│[39m  [33mnode_modules/framer-motion/dist/es/render/dom/features-animation.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min[39m
+[90m│[39m  [33m"node_modules/framer-motion/dist/es/render/dom/features-animation.mjs"[39m
+[90m│[39m  [33mwas ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m
+[90m│[39m  [33mnode_modules/framer-motion/dist/es/utils/use-motion-value-event.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min[39m
+[90m│[39m  [33m"node_modules/framer-motion/dist/es/utils/use-motion-value-event.mjs"[39m
+[90m│[39m  [33mwas ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/framer-motion/dist/es/value/use-motion-template.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min "node_modules/framer-motion/dist/es/value/use-motion-template.mjs"[39m
+[90m│[39m  [33mwas ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/framer-motion/dist/es/value/use-spring.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/framer-motion/dist/es/value/use-spring.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/framer-motion/dist/es/value/use-time.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/framer-motion/dist/es/value/use-time.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/framer-motion/dist/es/value/use-scroll.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/framer-motion/dist/es/value/use-scroll.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/framer-motion/dist/es/value/use-motion-value.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min "node_modules/framer-motion/dist/es/value/use-motion-value.mjs" was[39m
+[90m│[39m  [33mignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/framer-motion/dist/es/value/use-transform.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/framer-motion/dist/es/value/use-transform.mjs" was[39m
+[90m│[39m  [33mignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m
+[90m│[39m  [33mnode_modules/framer-motion/dist/es/value/use-will-change/index.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min[39m
+[90m│[39m  [33m"node_modules/framer-motion/dist/es/value/use-will-change/index.mjs"[39m
+[90m│[39m  [33mwas ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/framer-motion/dist/es/value/use-velocity.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/framer-motion/dist/es/value/use-velocity.mjs" was[39m
+[90m│[39m  [33mignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m
+[90m│[39m  [33mnode_modules/framer-motion/dist/es/utils/reduced-motion/use-reduced-motion-config.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min[39m
+[90m│[39m  [33m"node_modules/framer-motion/dist/es/utils/reduced-motion/use-reduced-motion-config.mjs"[39m
+[90m│[39m  [33mwas ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m
+[90m│[39m  [33mnode_modules/framer-motion/dist/es/animation/hooks/use-animate.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min[39m
+[90m│[39m  [33m"node_modules/framer-motion/dist/es/animation/hooks/use-animate.mjs"[39m
+[90m│[39m  [33mwas ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m
+[90m│[39m  [33mnode_modules/framer-motion/dist/es/animation/hooks/use-animation.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min[39m
+[90m│[39m  [33m"node_modules/framer-motion/dist/es/animation/hooks/use-animation.mjs"[39m
+[90m│[39m  [33mwas ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m
+[90m│[39m  [33mnode_modules/framer-motion/dist/es/components/AnimatePresence/use-presence.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min[39m
+[90m│[39m  [33m"node_modules/framer-motion/dist/es/components/AnimatePresence/use-presence.mjs"[39m
+[90m│[39m  [33mwas ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m
+[90m│[39m  [33mnode_modules/framer-motion/dist/es/components/AnimatePresence/use-presence-data.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min[39m
+[90m│[39m  [33m"node_modules/framer-motion/dist/es/components/AnimatePresence/use-presence-data.mjs"[39m
+[90m│[39m  [33mwas ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m
+[90m│[39m  [33mnode_modules/framer-motion/dist/es/animation/hooks/use-animate-style.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min[39m
+[90m│[39m  [33m"node_modules/framer-motion/dist/es/animation/hooks/use-animate-style.mjs"[39m
+[90m│[39m  [33mwas ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/framer-motion/dist/es/events/use-dom-event.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min "node_modules/framer-motion/dist/es/events/use-dom-event.mjs" was[39m
+[90m│[39m  [33mignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/framer-motion/dist/es/utils/use-animation-frame.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min "node_modules/framer-motion/dist/es/utils/use-animation-frame.mjs"[39m
+[90m│[39m  [33mwas ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/framer-motion/dist/es/utils/use-in-view.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/framer-motion/dist/es/utils/use-in-view.mjs" was[39m
+[90m│[39m  [33mignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m
+[90m│[39m  [33mnode_modules/framer-motion/dist/es/utils/use-instant-transition.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min[39m
+[90m│[39m  [33m"node_modules/framer-motion/dist/es/utils/use-instant-transition.mjs"[39m
+[90m│[39m  [33mwas ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/framer-motion/dist/es/utils/use-cycle.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/framer-motion/dist/es/utils/use-cycle.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/framer-motion/dist/es/context/LayoutGroupContext.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min "node_modules/framer-motion/dist/es/context/LayoutGroupContext.mjs"[39m
+[90m│[39m  [33mwas ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m
+[90m│[39m  [33mnode_modules/framer-motion/dist/es/context/MotionConfigContext.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min[39m
+[90m│[39m  [33m"node_modules/framer-motion/dist/es/context/MotionConfigContext.mjs"[39m
+[90m│[39m  [33mwas ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m
+[90m│[39m  [33mnode_modules/framer-motion/dist/es/context/MotionContext/index.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min[39m
+[90m│[39m  [33m"node_modules/framer-motion/dist/es/context/MotionContext/index.mjs"[39m
+[90m│[39m  [33mwas ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/framer-motion/dist/es/utils/use-page-in-view.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min "node_modules/framer-motion/dist/es/utils/use-page-in-view.mjs" was[39m
+[90m│[39m  [33mignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/framer-motion/dist/es/context/PresenceContext.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min "node_modules/framer-motion/dist/es/context/PresenceContext.mjs"[39m
+[90m│[39m  [33mwas ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m
+[90m│[39m  [33mnode_modules/framer-motion/dist/es/context/SwitchLayoutGroupContext.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min[39m
+[90m│[39m  [33m"node_modules/framer-motion/dist/es/context/SwitchLayoutGroupContext.mjs"[39m
+[90m│[39m  [33mwas ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m
+[90m│[39m  [33mnode_modules/framer-motion/dist/es/animation/hooks/use-animated-state.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min[39m
+[90m│[39m  [33m"node_modules/framer-motion/dist/es/animation/hooks/use-animated-state.mjs"[39m
+[90m│[39m  [33mwas ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m
+[90m│[39m  [33mnode_modules/framer-motion/dist/es/components/AnimateSharedLayout.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min[39m
+[90m│[39m  [33m"node_modules/framer-motion/dist/es/components/AnimateSharedLayout.mjs"[39m
+[90m│[39m  [33mwas ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/framer-motion/dist/es/value/use-inverted-scale.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min "node_modules/framer-motion/dist/es/value/use-inverted-scale.mjs"[39m
+[90m│[39m  [33mwas ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m
+[90m│[39m  [33mnode_modules/framer-motion/dist/es/context/DeprecatedLayoutGroupContext.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min[39m
+[90m│[39m  [33m"node_modules/framer-motion/dist/es/context/DeprecatedLayoutGroupContext.mjs"[39m
+[90m│[39m  [33mwas ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/react-utils/dist/chunk-3XT5V4LF.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/react-utils/dist/chunk-3XT5V4LF.mjs" was[39m
+[90m│[39m  [33mignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/react-utils/dist/chunk-BDGLNRCW.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/react-utils/dist/chunk-BDGLNRCW.mjs" was[39m
+[90m│[39m  [33mignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/react-utils/dist/chunk-VKMEMDAU.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/react-utils/dist/chunk-VKMEMDAU.mjs" was[39m
+[90m│[39m  [33mignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/react-utils/dist/chunk-LGMZDQT5.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/react-utils/dist/chunk-LGMZDQT5.mjs" was[39m
+[90m│[39m  [33mignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/react-utils/dist/chunk-6UBKM7F3.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/react-utils/dist/chunk-6UBKM7F3.mjs" was[39m
+[90m│[39m  [33mignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/aria-utils/dist/chunk-EG4WMP7F.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/aria-utils/dist/chunk-EG4WMP7F.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/aria-utils/dist/chunk-PCPL3WJ4.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/aria-utils/dist/chunk-PCPL3WJ4.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/aria-utils/dist/chunk-GJQTIVYB.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/aria-utils/dist/chunk-GJQTIVYB.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/aria-utils/dist/chunk-QGF3LYTS.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/aria-utils/dist/chunk-QGF3LYTS.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/aria-utils/dist/chunk-WQVQ7P2I.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/aria-utils/dist/chunk-WQVQ7P2I.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/aria-utils/dist/chunk-3MION23H.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/aria-utils/dist/chunk-3MION23H.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/@heroui/aria-utils/dist/chunk-YVW4JKAM.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/@heroui/aria-utils/dist/chunk-YVW4JKAM.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m
+[90m│[39m  [33mnode_modules/framer-motion/dist/es/utils/reduced-motion/use-reduced-motion.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min[39m
+[90m│[39m  [33m"node_modules/framer-motion/dist/es/utils/reduced-motion/use-reduced-motion.mjs"[39m
+[90m│[39m  [33mwas ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m
+[90m│[39m  [33mnode_modules/framer-motion/dist/es/components/AnimatePresence/index.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min[39m
+[90m│[39m  [33m"node_modules/framer-motion/dist/es/components/AnimatePresence/index.mjs"[39m
+[90m│[39m  [33mwas ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/framer-motion/dist/es/utils/use-constant.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/framer-motion/dist/es/utils/use-constant.mjs" was[39m
+[90m│[39m  [33mignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/framer-motion/dist/es/context/LazyContext.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/framer-motion/dist/es/context/LazyContext.mjs" was[39m
+[90m│[39m  [33mignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/framer-motion/dist/es/utils/use-is-mounted.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min "node_modules/framer-motion/dist/es/utils/use-is-mounted.mjs" was[39m
+[90m│[39m  [33mignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/framer-motion/dist/es/value/use-computed.mjs (1:0):[39m
+[90m│[39m  [33mModule level directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/framer-motion/dist/es/value/use-computed.mjs" was[39m
+[90m│[39m  [33mignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/framer-motion/dist/es/value/use-combine-values.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min "node_modules/framer-motion/dist/es/value/use-combine-values.mjs"[39m
+[90m│[39m  [33mwas ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/framer-motion/dist/es/components/Reorder/Item.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min "node_modules/framer-motion/dist/es/components/Reorder/Item.mjs"[39m
+[90m│[39m  [33mwas ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/framer-motion/dist/es/components/Reorder/Group.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min "node_modules/framer-motion/dist/es/components/Reorder/Group.mjs"[39m
+[90m│[39m  [33mwas ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m
+[90m│[39m  [33mnode_modules/framer-motion/dist/es/motion/features/layout/MeasureLayout.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min[39m
+[90m│[39m  [33m"node_modules/framer-motion/dist/es/motion/features/layout/MeasureLayout.mjs"[39m
+[90m│[39m  [33mwas ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/framer-motion/dist/es/context/ReorderContext.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min "node_modules/framer-motion/dist/es/context/ReorderContext.mjs" was[39m
+[90m│[39m  [33mignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/framer-motion/dist/es/motion/index.mjs (1:0): Module[39m
+[90m│[39m  [33mlevel directives cause errors when bundled, "use client" in[39m
+[90m│[39m  [33m"node_modules/framer-motion/dist/es/motion/index.mjs" was ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m
+[90m│[39m  [33mnode_modules/framer-motion/dist/es/context/MotionContext/create.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min[39m
+[90m│[39m  [33m"node_modules/framer-motion/dist/es/context/MotionContext/create.mjs"[39m
+[90m│[39m  [33mwas ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m
+[90m│[39m  [33mnode_modules/framer-motion/dist/es/render/html/use-html-visual-state.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min[39m
+[90m│[39m  [33m"node_modules/framer-motion/dist/es/render/html/use-html-visual-state.mjs"[39m
+[90m│[39m  [33mwas ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/framer-motion/dist/es/render/dom/use-render.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min "node_modules/framer-motion/dist/es/render/dom/use-render.mjs" was[39m
+[90m│[39m  [33mignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m
+[90m│[39m  [33mnode_modules/framer-motion/dist/es/render/svg/use-svg-visual-state.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min[39m
+[90m│[39m  [33m"node_modules/framer-motion/dist/es/render/svg/use-svg-visual-state.mjs"[39m
+[90m│[39m  [33mwas ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m
+[90m│[39m  [33mnode_modules/framer-motion/dist/es/motion/utils/use-motion-ref.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min[39m
+[90m│[39m  [33m"node_modules/framer-motion/dist/es/motion/utils/use-motion-ref.mjs"[39m
+[90m│[39m  [33mwas ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m
+[90m│[39m  [33mnode_modules/framer-motion/dist/es/motion/utils/use-visual-element.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min[39m
+[90m│[39m  [33m"node_modules/framer-motion/dist/es/motion/utils/use-visual-element.mjs"[39m
+[90m│[39m  [33mwas ignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/framer-motion/dist/es/render/html/use-props.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min "node_modules/framer-motion/dist/es/render/html/use-props.mjs" was[39m
+[90m│[39m  [33mignored.[39m
+[90m│[39m
+[33m▲[39m  [43mVite[49m [33mnode_modules/framer-motion/dist/es/render/svg/use-props.mjs[39m
+[90m│[39m  [33m(1:0): Module level directives cause errors when bundled, "use client"[39m
+[90m│[39m  [33min "node_modules/framer-motion/dist/es/render/svg/use-props.mjs" was[39m
+[90m│[39m  [33mignored.[39m
+[90m│[39m  [43mVite[49m [32m✓[39m 1996 modules transformed.
+[90m│[39m  [43mVite[49m rendering chunks...
+[90m│[39m  [43mVite[49m
+[90m│[39m  [2m../../../../AppData/Local/Temp/chromatic--12028-HnNPu4NyYDmc/[22m[32miframe.html[39m[1m[2m[22m
+[90m│[39m  [2m18.23 kB[22m[1m[22m
+[90m│[39m  [43mVite[49m
+[90m│[39m  [2m../../../../AppData/Local/Temp/chromatic--12028-HnNPu4NyYDmc/[22m[35massets/iframe-Ig-i3TVg.css[39m[1m[2m[22m
+[90m│[39m  [2m234.54 kB[22m[1m[22m
+[90m│[39m  [43mVite[49m
+[90m│[39m  [2m../../../../AppData/Local/Temp/chromatic--12028-HnNPu4NyYDmc/[22m[36massets/preload-helper-PPVm8Dsz.js[39m[1m[2m[22m
+[90m│[39m  [2m1.23 kB[22m[1m[22m
+[90m│[39m  [43mVite[49m
+[90m│[39m  [2m../../../../AppData/Local/Temp/chromatic--12028-HnNPu4NyYDmc/[22m[36mvite-inject-mocker-entry.js[39m[1m[2m[22m
+[90m│[39m  [2m28.30 kB[22m[1m[22m
+[90m│[39m  [43mVite[49m
+[90m│[39m  [2m../../../../AppData/Local/Temp/chromatic--12028-HnNPu4NyYDmc/[22m[36massets/matchers-DMFSMG2O-HJu_DfWo.js[39m[1m[2m[22m
+[90m│[39m  [2m29.23 kB[22m[1m[22m
+[90m│[39m  [43mVite[49m
+[90m│[39m  [2m../../../../AppData/Local/Temp/chromatic--12028-HnNPu4NyYDmc/[22m[36massets/GoogleEnter.stories-BgZeQd06.js[39m[1m[2m[22m
+[90m│[39m  [2m46.32 kB[22m[1m[22m
+[90m│[39m  [43mVite[49m
+[90m│[39m  [2m../../../../AppData/Local/Temp/chromatic--12028-HnNPu4NyYDmc/[22m[36massets/react-18-CTqy79A2.js[39m[1m[2m[22m
+[90m│[39m  [2m205.12 kB[22m[1m[22m
+[90m│[39m  [43mVite[49m
+[90m│[39m  [2m../../../../AppData/Local/Temp/chromatic--12028-HnNPu4NyYDmc/[22m[36massets/axe-B3GPLlk0.js[39m[1m[33m[39m
+[90m│[39m  [33m578.28 kB[39m[22m
+[90m│[39m  [43mVite[49m
+[90m│[39m  [2m../../../../AppData/Local/Temp/chromatic--12028-HnNPu4NyYDmc/[22m[36massets/iframe-BvbXREy8.js[39m
+[90m│[39m  [36m[39m[1m[33m1,236.96 kB[39m[22m
+[90m│[39m
+[33m▲[39m  [43mVite[49m[33m
+[90m│[39m  (!) Some chunks are larger than 500 kB after minification. Consider:
+[90m│[39m  - Using dynamic import() to code-split the application
+[90m│[39m  - Use build.rollupOptions.output.manualChunks to improve chunking:
+[90m│[39m  ]8;;https://rollupjs.org/configuration-options/#output-manualchunkshttps://rollupjs.org/configuration-options/#output-manualchunks]8;;
+[90m│[39m  - Adjust chunk size limit for this warning via
+[90m│[39m  build.chunkSizeWarningLimit.[39m
+[90m│[39m  [43mVite[49m [32m✓ built in 4.98s[39m
+[90m│[39m
+[32m◇[39m  Output directory:
+[90m│[39m  C:/Users/cio/AppData/Local/Temp/chromatic--12028-HnNPu4NyYDmc
+[90m│[39m
+[90m└[39m  Storybook build completed successfully
+
