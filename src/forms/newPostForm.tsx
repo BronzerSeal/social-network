@@ -23,11 +23,16 @@ const NewPostForm = ({ onClose }: IProps) => {
     formData.append("text", text);
     formData.append("userId", session.user.id);
 
+    const tags = text.match(/#\w+/g) ?? [];
+    tags.forEach((tag) => {
+      formData.append("hashtags", tag);
+    });
+
     files.forEach((file) => {
       formData.append("files", file);
     });
 
-    await axios.post("/api/posts", formData, {
+    const resp = await axios.post("/api/posts", formData, {
       headers: {
         "Content-Type": "multipart/form-data",
       },

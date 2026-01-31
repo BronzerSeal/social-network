@@ -21,13 +21,20 @@ import { increaseSentTimes } from "@/actions/posts/sentTimes/increaseSentTimes";
 import EnlargeImageModal from "./modals/enlargeImage.modal";
 import { loadUserPosts } from "@/store/userPosts.store";
 import { useRouter } from "next/navigation";
+import { renderHashtags } from "@/utils/renderHashtags";
 
-const UserPost = ({ post }: { post: PostWithUser }) => {
+const UserPost = ({
+  post,
+  canDelete = true,
+}: {
+  post: PostWithUser;
+  canDelete?: boolean;
+}) => {
   const { data: session } = useSession();
   const router = useRouter();
 
   const likedByUser = post.likedBy.some(
-    (like) => like.userId === session?.user.id
+    (like) => like.userId === session?.user.id,
   );
 
   const [heart, setHeart] = useState(likedByUser);
@@ -111,7 +118,7 @@ const UserPost = ({ post }: { post: PostWithUser }) => {
           />
           <h1 className="font-semibold">{post.user.name}</h1>
         </div>
-        {session?.user.id === post.userId && (
+        {session?.user.id === post.userId && canDelete && (
           <X
             onClick={() => {
               deletePost(post.id);
@@ -157,7 +164,7 @@ const UserPost = ({ post }: { post: PostWithUser }) => {
           </div>
         )}
 
-        <h1 className="mt-2">{post.text}</h1>
+        <h1 className="mt-2">{renderHashtags(post.text)}</h1>
       </CardBody>
       <CardFooter className="flex gap-3 text-gray-600">
         <div

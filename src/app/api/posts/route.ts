@@ -9,11 +9,12 @@ export async function POST(req: NextRequest) {
     const post_text = formData.get("text") as string;
     const userId = formData.get("userId") as string;
     const files = formData.getAll("files") as File[];
+    const hashtags = formData.getAll("hashtags") as string[];
 
     if (!post_text) {
       return NextResponse.json(
         { message: "No text provided" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -21,6 +22,15 @@ export async function POST(req: NextRequest) {
       data: {
         text: post_text,
         userId,
+        hashtags: {
+          connectOrCreate: hashtags.map((tag) => ({
+            where: { content: tag },
+            create: { content: tag },
+          })),
+        },
+      },
+      include: {
+        hashtags: true,
       },
     });
 
@@ -42,7 +52,7 @@ export async function POST(req: NextRequest) {
             file_data: blob.url,
           },
         });
-      })
+      }),
     );
 
     return NextResponse.json({ post: createdPost, files: createdFiles });

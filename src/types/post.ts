@@ -21,6 +21,11 @@ interface Like {
   userId: string;
 }
 
+interface Hashtag {
+  content: string;
+  id: string;
+}
+
 export interface CommentProps {
   createdAt: Date;
   id: string;
@@ -39,13 +44,15 @@ export interface Post {
   sentTimes: number;
 }
 
-export interface PostWithUser {
-  id: string;
-  text: string;
-  userId: string;
-  images: images[];
+export interface PostWithUser extends Post {
   user: User;
   likedBy: Like[];
   comments: CommentProps[];
   sentTimes: number;
 }
+
+export interface PostWithUserHashtag extends PostWithUser {
+  hashtags: Hashtag[];
+}
+
+export type Cursor = { createdAt: Date; id: string } | null | undefined;

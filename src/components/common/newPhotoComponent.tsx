@@ -41,7 +41,7 @@ const NewPhotoComponent = ({ onFilesChange, maxFiles = 20 }: Props) => {
 
     // ---------- ЛОГИКА ОГРАНИЧЕНИЯ КОЛИЧЕСТВА ----------
 
-    // если только одно фото → просто заменяемa
+    // если только одно фото → просто заменяем
     if (maxFiles === 1) {
       const file = newFiles[0];
       if (!file) return;
