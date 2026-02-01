@@ -1,20 +1,20 @@
 "use client";
 
 import { deleteComment } from "@/actions/posts/comments/deleteComment";
+import { useDeleteComment } from "@/hooks/usePostsInteraction/comments/useDeleteComment";
 import { CommentProps } from "@/types/post";
 import { formatTime } from "@/utils/formatTime";
 import { addToast, Avatar } from "@heroui/react";
 import { X } from "lucide-react";
 import { useSession } from "next-auth/react";
-import { Dispatch, SetStateAction, useState } from "react";
+import { useState } from "react";
 
 interface Props {
   comment: CommentProps;
-  comments: CommentProps[];
-  setComments: Dispatch<SetStateAction<CommentProps[]>>;
+  postId: string;
 }
 
-const Comment = ({ comment, setComments, comments }: Props) => {
+const Comment = ({ comment, postId }: Props) => {
   const { data: session } = useSession();
   const [expanded, setExpanded] = useState(false);
 
@@ -26,6 +26,8 @@ const Comment = ({ comment, setComments, comments }: Props) => {
     ? comment.text
     : comment.text.slice(0, MAX_LENGTH);
 
+  const deleteMutation = useDeleteComment();
+
   const handleDeleteComment = async () => {
     const result = await deleteComment(comment.id);
 
@@ -36,10 +38,10 @@ const Comment = ({ comment, setComments, comments }: Props) => {
       });
     }
 
-    const filteredComments = comments.filter(
-      (com) => com.id !== result.comment.id
-    );
-    setComments(filteredComments);
+    deleteMutation.mutate({
+      commentId: comment.id,
+      postId,
+    });
     addToast({
       title: "comment successful deleted",
       color: "success",

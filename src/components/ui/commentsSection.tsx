@@ -4,15 +4,14 @@ import NewCommentForm from "@/forms/newCommentForm";
 import Comment from "../common/Comment";
 import { CommentProps } from "@/types/post";
 import { Pagination } from "@heroui/react";
-import { Dispatch, SetStateAction, useState } from "react";
+import { useState } from "react";
 
 interface Props {
   postId: string;
   comments: CommentProps[];
-  setComments: Dispatch<SetStateAction<CommentProps[]>>;
 }
 
-const CommentsSection = ({ postId, comments, setComments }: Props) => {
+const CommentsSection = ({ postId, comments }: Props) => {
   const perPage = 3;
 
   const [page, setPage] = useState(1);
@@ -21,17 +20,13 @@ const CommentsSection = ({ postId, comments, setComments }: Props) => {
 
   const paginatedComments = comments.slice(
     (page - 1) * perPage,
-    page * perPage
+    page * perPage,
   );
   return (
     <div>
       {paginatedComments.map((comment) => (
         <div key={comment.id} className="flex flex-col mt-1">
-          <Comment
-            comment={comment}
-            setComments={setComments}
-            comments={comments}
-          />
+          <Comment comment={comment} postId={postId} />
         </div>
       ))}
 
@@ -44,7 +39,7 @@ const CommentsSection = ({ postId, comments, setComments }: Props) => {
         />
       )}
 
-      <NewCommentForm postId={postId} setComments={setComments} />
+      <NewCommentForm postId={postId} />
     </div>
   );
 };

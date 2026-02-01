@@ -1,28 +1,18 @@
 "use server";
-
-import { InfinityPostsResponse } from "@/types/post";
+import { Cursor, InfinityPostsResponse } from "@/types/post";
 import prisma from "@/utils/prisma";
 
 const PAGE_SIZE = 10;
 
-export async function getInfinityPostsByHashtag({
-  hashtag,
+export async function getInfinityPosts({
   cursor,
 }: {
-  hashtag: string;
-  cursor?: { createdAt: Date; id: string } | null;
+  cursor?: Cursor;
 }): Promise<InfinityPostsResponse> {
   try {
     const posts = await (prisma.post.findMany as any)({
       take: PAGE_SIZE + 1,
-      orderBy: [{ createdAt: "desc" }, { id: "desc" }],
-      where: {
-        hashtags: {
-          some: {
-            content: hashtag,
-          },
-        },
-      },
+      skip: cursor ? 1 : 0,
       cursor: cursor
         ? {
             createdAt_id: {
@@ -31,17 +21,16 @@ export async function getInfinityPostsByHashtag({
             },
           }
         : undefined,
-      skip: cursor ? 1 : 0,
       include: {
-        user: true,
         images: true,
-        hashtags: true,
+        user: true,
         likedBy: true,
         comments: {
           orderBy: { createdAt: "desc" },
           include: { user: true },
         },
       },
+      orderBy: [{ createdAt: "desc" }, { id: "desc" }],
     });
 
     let nextCursor = null;
@@ -54,13 +43,14 @@ export async function getInfinityPostsByHashtag({
       };
     }
 
-    return {
-      posts,
-      nextCursor,
-      success: true,
-    };
+    return { success: true, posts, nextCursor };
   } catch (error) {
-    console.log(error);
-    return { posts: [], nextCursor: null, success: false };
+    console.error("Error getting posts:", error);
+    return {
+      error: "Error getting posts",
+      posts: [],
+      nextCursor: null,
+      success: false,
+    };
   }
 }

@@ -1,52 +1,54 @@
 "use client";
 
-import { createComment } from "@/actions/posts/comments/createComment";
-import { loadPostById, loadPosts } from "@/store/posts.store.";
-import { CommentProps } from "@/types/post";
+import { useCreateComment } from "@/hooks/usePostsInteraction/comments/useCreateComment";
 import { addToast, Avatar, Button, Input } from "@heroui/react";
 import { Send } from "lucide-react";
 import { useSession } from "next-auth/react";
-import { ChangeEvent, Dispatch, SetStateAction, useState } from "react";
+import { ChangeEvent, useState } from "react";
 
 interface Props {
   postId: string;
-  setComments: Dispatch<SetStateAction<CommentProps[]>>;
 }
 
-const NewCommentForm = ({ postId, setComments }: Props) => {
+const NewCommentForm = ({ postId }: Props) => {
   const { data: session } = useSession();
   const [value, setValue] = useState("");
+  const createCommentMutation = useCreateComment();
 
   const handleCreateComment = async () => {
-    if (!session?.user.id)
+    if (!session?.user.id) {
       return addToast({
         title: "Log in to write comments",
         color: "danger",
       });
-    if (!value)
+    }
+    if (!value) {
       return addToast({
         title: "write something to post comment",
         color: "danger",
       });
-    const result = await createComment(postId, session?.user.id, value);
+    }
 
-    if (!result?.comment) {
+    createCommentMutation.mutate({
+      postId,
+      user: session?.user,
+      value,
+    });
+
+    if (createCommentMutation.error) {
       addToast({
         title: "Failed to add comment",
         color: "danger",
       });
       return;
+    } else {
+      addToast({
+        title: "successful addition of a comment",
+        color: "success",
+      });
     }
-    setComments((prev) => [
-      { ...result.comment, user: session.user as any },
-      ...prev,
-    ]);
-    addToast({
-      title: "successful addition of a comment",
-      color: "success",
-    });
+
     setValue("");
-    loadPostById(postId);
   };
 
   return (

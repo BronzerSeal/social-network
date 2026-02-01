@@ -1,13 +1,14 @@
 "use client";
 
-import {
-  getInfinityPostsByHashtag,
-  InfinityPostsResponse,
-} from "@/actions/posts/getInfinityPostsByHashtag";
+import { getInfinityPostsByHashtag } from "@/actions/posts/getInfinityPostsByHashtag";
 import { getPostsWithHashtagCount } from "@/actions/posts/getPostsWithHashtagCount";
 import UserPostSkeleton from "@/components/skeletons/UserPostSkeleton";
 import UserPost from "@/components/ui/userPost";
-import { Cursor, PostWithUserHashtag } from "@/types/post";
+import {
+  Cursor,
+  InfinityPostsResponse,
+  PostWithUserHashtag,
+} from "@/types/post";
 import { addToast, Card, CardBody, Chip } from "@heroui/react";
 import { useInfiniteQuery } from "@tanstack/react-query";
 import { ChevronLeft } from "lucide-react";
@@ -55,7 +56,7 @@ const HashtagPage = () => {
       });
     }
   }
-
+  console.log(posts);
   useEffect(() => {
     loadPostsCount();
   }, [tag]);

@@ -55,4 +55,12 @@ export interface PostWithUserHashtag extends PostWithUser {
   hashtags: Hashtag[];
 }
 
+//infinity
 export type Cursor = { createdAt: Date; id: string } | null | undefined;
+
+export type InfinityPostsResponse = {
+  posts: PostWithUserHashtag[];
+  nextCursor: { createdAt: Date; id: string } | null;
+  success: boolean;
+  error?: string;
+};

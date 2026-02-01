@@ -2,16 +2,17 @@
 import UserPostSkeleton from "@/components/skeletons/UserPostSkeleton";
 import NewPostModal from "@/components/ui/modals/newPost.modal";
 import UserPost from "@/components/ui/userPost";
-import { usePostIsLoading, usePosts } from "@/store/posts.store.";
+import { useFeedPagePosts } from "@/hooks/useFeedPagePosts";
 import { Button, useDisclosure } from "@heroui/react";
 import { Plus } from "lucide-react";
 import { useSession } from "next-auth/react";
 
 const FeedPage = () => {
   const { data: session } = useSession();
-  const posts = usePosts();
-  const postsLoading = usePostIsLoading();
+  // const posts = usePosts();
+  // const postsLoading = usePostIsLoading();
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const { posts, isLoading, cursor } = useFeedPagePosts();
 
   if (!session) return <p>unauthorized</p>;
 
@@ -28,12 +29,14 @@ const FeedPage = () => {
             Create new post
           </Button>
 
-          {postsLoading ? (
+          {isLoading ? (
             <UserPostSkeleton />
           ) : (
+            !!posts &&
             posts.map((post) => <UserPost key={post.id} post={post} />)
           )}
         </div>
+        {cursor}
       </div>
       <NewPostModal isOpen={isOpen} onClose={onClose} />
     </div>

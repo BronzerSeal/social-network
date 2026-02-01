@@ -1,6 +1,5 @@
 "use client";
 import { deletePost } from "@/actions/posts/deletePost";
-import toggleFavouritePost from "@/actions/posts/toggleFavouritePost";
 import { loadPosts } from "@/store/posts.store.";
 import { PostWithUser } from "@/types/post";
 import {
@@ -17,11 +16,12 @@ import { ExternalLink, Heart, MessageSquare, X } from "lucide-react";
 import { useSession } from "next-auth/react";
 import { useState } from "react";
 import CommentsModal from "./modals/comments.modal";
-import { increaseSentTimes } from "@/actions/posts/sentTimes/increaseSentTimes";
 import EnlargeImageModal from "./modals/enlargeImage.modal";
 import { loadUserPosts } from "@/store/userPosts.store";
 import { useRouter } from "next/navigation";
 import { renderHashtags } from "@/utils/renderHashtags";
+import { usePostLike } from "@/hooks/usePostsInteraction/usePostLike";
+import useCopyLink from "@/hooks/usePostsInteraction/useCopyLink";
 
 const UserPost = ({
   post,
@@ -32,19 +32,18 @@ const UserPost = ({
 }) => {
   const { data: session } = useSession();
   const router = useRouter();
+  const likeMutation = usePostLike();
+  const copyLinkMutation = useCopyLink();
 
   const likedByUser = post.likedBy.some(
     (like) => like.userId === session?.user.id,
   );
+  const heartCount = post.likedBy.length;
+  const sentTimes = post.sentTimes;
 
-  const [heart, setHeart] = useState(likedByUser);
-  const [heartCount, setHeartCount] = useState(post.likedBy.length);
+  const commentsList = post.comments;
 
   const { isOpen, onOpen, onClose } = useDisclosure();
-
-  const [commentsList, setCommentsList] = useState(post.comments);
-  const [sentTimes, setSentTimes] = useState(post.sentTimes);
-
   const {
     isOpen: isImageOpen,
     onOpen: onImageOpen,
@@ -52,7 +51,6 @@ const UserPost = ({
   } = useDisclosure();
 
   const [previewImage, setPreviewImage] = useState<string | null>(null);
-
   const openImage = (src: string) => {
     setPreviewImage(src);
     onImageOpen();
@@ -65,21 +63,20 @@ const UserPost = ({
         color: "danger",
       });
 
-    const newHeart = !heart;
-    setHeart(newHeart);
-    setHeartCount(newHeart ? heartCount + 1 : heartCount - 1);
+    const newHeart = !likedByUser;
 
-    try {
-      await toggleFavouritePost(post.id, newHeart, session.user.id);
-    } catch (err) {
-      // if error
-      setHeart(!newHeart);
-      setHeartCount(newHeart ? heartCount - 1 : heartCount + 1);
+    likeMutation.mutate({
+      postId: post.id,
+      newHeart,
+      userId: session.user.id,
+    });
+
+    if (likeMutation.error) {
       addToast({
         title: "Something was wrong",
         color: "danger",
       });
-      console.error(err);
+      console.log(likeMutation.error);
     }
   };
 
@@ -93,9 +90,7 @@ const UserPost = ({
       console.warn("Clipboard write failed, ignored in test");
     }
 
-    // всегда увеличиваем счетчик
-    await increaseSentTimes(post.id);
-    setSentTimes((prev) => prev + 1);
+    copyLinkMutation.mutate(post.id);
 
     addToast({
       title: "The link has been copied to the clipboard.",
@@ -174,7 +169,7 @@ const UserPost = ({
         >
           <Heart
             className={`h-6 w-6 transition-colors ${
-              heart ? "text-red-500 fill-red-500" : ""
+              likedByUser ? "text-red-500 fill-red-500" : ""
             }`}
           />
           <p>{heartCount}</p>
@@ -201,7 +196,6 @@ const UserPost = ({
         isOpen={isOpen}
         postId={post.id}
         comments={commentsList}
-        setComments={setCommentsList}
       />
       <EnlargeImageModal
         isImageOpen={isImageOpen}
