@@ -1,18 +1,16 @@
 "use client";
-import getUserById from "@/actions/getUserById";
 import ProfileHeaderSkeleton from "@/components/skeletons/ProfileHeaderSkeleton";
 import UserPostSkeleton from "@/components/skeletons/UserPostSkeleton";
 import FriendsSection from "@/components/ui/friendsSection";
 import NewPostModal from "@/components/ui/modals/newPost.modal";
 import UserPost from "@/components/ui/userPost";
 import ProfileHeader from "@/components/ui/userProfile/profileHeader";
+import { useUserPagePosts } from "@/hooks/useUserPagePosts";
 import {
   loadUser,
   loadUserPosts,
   useProfileUser,
   useProfileUserError,
-  useUserPostIsLoading,
-  useUserPosts,
   useUserProfileIsLoading,
 } from "@/store/userPosts.store";
 import { Button, Chip, useDisclosure } from "@heroui/react";
@@ -24,8 +22,7 @@ import { useEffect } from "react";
 const UserPage = () => {
   const { userId } = useParams() as { userId: string };
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const posts = useUserPosts();
-  const postsLoading = useUserPostIsLoading();
+  const { posts, isLoading: postsLoading, cursor } = useUserPagePosts(userId);
   const userLoading = useUserProfileIsLoading();
 
   const pageUser = useProfileUser();
@@ -37,6 +34,8 @@ const UserPage = () => {
       loadUserPosts(userId);
     }
   }, [userId]);
+
+  console.log(posts);
 
   return (
     <div className="py-2">
@@ -68,12 +67,13 @@ const UserPage = () => {
           )}
           {postsLoading ? (
             <UserPostSkeleton />
-          ) : posts.length > 0 ? (
-            posts.map((post) => <UserPost key={post.id} post={post} />)
+          ) : !!posts ? (
+            posts?.map((post) => <UserPost key={post.id} post={post} />)
           ) : (
             <p>Create your first post</p>
           )}
 
+          {cursor}
           <NewPostModal isOpen={isOpen} onClose={onClose} />
         </>
       )}

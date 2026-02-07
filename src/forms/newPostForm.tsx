@@ -1,11 +1,11 @@
 "use client";
 import NewPhotoComponent from "@/components/common/newPhotoComponent";
-import { Button, Textarea } from "@heroui/react";
+import { addToast, Button, Textarea } from "@heroui/react";
 import { useState } from "react";
 import axios from "axios";
 import { useSession } from "next-auth/react";
-import { loadPosts } from "@/store/posts.store.";
-import { loadUserPosts } from "@/store/userPosts.store";
+import { useMutation } from "@tanstack/react-query";
+import { queryClient } from "@/utils/query-client";
 
 interface IProps {
   onClose: () => void;
@@ -15,6 +15,20 @@ const NewPostForm = ({ onClose }: IProps) => {
   const { data: session } = useSession();
   const [text, setText] = useState("write something");
   const [files, setFiles] = useState<File[]>([]);
+
+  const mutation = useMutation({
+    mutationFn: (formData: any) =>
+      axios.post("/api/posts", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      }),
+    onSuccess: () => {
+      queryClient.invalidateQueries({
+        queryKey: ["posts"],
+      });
+    },
+  });
 
   const handleSubmit = async () => {
     if (!session?.user.id) return;
@@ -32,14 +46,13 @@ const NewPostForm = ({ onClose }: IProps) => {
       formData.append("files", file);
     });
 
-    const resp = await axios.post("/api/posts", formData, {
-      headers: {
-        "Content-Type": "multipart/form-data",
-      },
-    });
-
-    loadPosts();
-    loadUserPosts(session?.user.id);
+    mutation.mutate(formData);
+    if (mutation.error) {
+      addToast({
+        title: "Something was wrong, try again later",
+        color: "danger",
+      });
+    }
 
     onClose();
   };

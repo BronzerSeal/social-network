@@ -9,8 +9,6 @@ import { useSession } from "next-auth/react";
 
 const FeedPage = () => {
   const { data: session } = useSession();
-  // const posts = usePosts();
-  // const postsLoading = usePostIsLoading();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { posts, isLoading, cursor } = useFeedPagePosts();
 

@@ -1,5 +1,5 @@
 "use client";
-import { deletePost } from "@/actions/posts/deletePost";
+// import { deletePost } from "@/actions/posts/deletePost";
 import { loadPosts } from "@/store/posts.store.";
 import { PostWithUser } from "@/types/post";
 import {
@@ -22,6 +22,7 @@ import { useRouter } from "next/navigation";
 import { renderHashtags } from "@/utils/renderHashtags";
 import { usePostLike } from "@/hooks/usePostsInteraction/usePostLike";
 import useCopyLink from "@/hooks/usePostsInteraction/useCopyLink";
+import { useDeletePost } from "@/hooks/usePostsInteraction/usePostDelete";
 
 const UserPost = ({
   post,
@@ -34,6 +35,7 @@ const UserPost = ({
   const router = useRouter();
   const likeMutation = usePostLike();
   const copyLinkMutation = useCopyLink();
+  const deleteMutation = useDeletePost();
 
   const likedByUser = post.likedBy.some(
     (like) => like.userId === session?.user.id,
@@ -116,7 +118,7 @@ const UserPost = ({
         {session?.user.id === post.userId && canDelete && (
           <X
             onClick={() => {
-              deletePost(post.id);
+              deleteMutation.mutate(post.id);
               loadPosts();
               loadUserPosts(session?.user.id);
             }}
@@ -128,7 +130,7 @@ const UserPost = ({
       <CardBody>
         {post.images.length > 0 && (
           <div className="flex flex-col gap-2">
-            {/* Большое главное изображение */}
+            {/* main */}
             <div className="w-full h-[400px] overflow-hidden rounded-sm">
               <img
                 alt={post.images[0].file_name}
@@ -139,7 +141,7 @@ const UserPost = ({
               />
             </div>
 
-            {/* Миниатюры снизу */}
+            {/*mini bottoms */}
             {post.images.length > 1 && (
               <div className="flex gap-2 overflow-x-auto mt-2">
                 {post.images.slice(1).map((image) => (

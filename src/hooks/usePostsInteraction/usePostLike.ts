@@ -20,10 +20,7 @@ export const usePostLike = () => {
         queryKey: ["posts"],
       });
 
-      const previousData = queryClient.getQueryData<any>([
-        "posts",
-        "feed-page",
-      ]);
+      const previousData = queryClient.getQueryData<any>(["posts"]);
 
       queryClient.setQueryData(["posts", "feed-page"], (old: any) => {
         if (!old) return old;
