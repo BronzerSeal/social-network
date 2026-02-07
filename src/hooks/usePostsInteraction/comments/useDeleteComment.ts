@@ -22,7 +22,6 @@ export const useDeleteComment = () => {
 
       queryClient.setQueryData(["posts", "feed-page"], (old: any) => {
         if (!old) return old;
-        console.log(old);
         return {
           ...old,
           pages: old.pages.map((page: any) => ({

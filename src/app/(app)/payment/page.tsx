@@ -16,13 +16,11 @@ export default function PaymentPage() {
     if (!token) return;
 
     const initWidget = () => {
-      // 💣 если был старый — уничтожаем
       if (checkoutRef.current) {
         checkoutRef.current.destroy();
         checkoutRef.current = null;
       }
 
-      // 💣 чистим контейнер
       const container = document.getElementById("payment-form");
       if (container) container.innerHTML = "";
 
@@ -46,7 +44,6 @@ export default function PaymentPage() {
       initWidget();
     }
 
-    // ✅ cleanup при уходе со страницы
     return () => {
       if (checkoutRef.current) {
         checkoutRef.current.destroy();

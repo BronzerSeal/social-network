@@ -1,6 +1,4 @@
 "use client";
-// import { deletePost } from "@/actions/posts/deletePost";
-import { loadPosts } from "@/store/posts.store.";
 import { PostWithUser } from "@/types/post";
 import {
   addToast,
@@ -119,7 +117,6 @@ const UserPost = ({
           <X
             onClick={() => {
               deleteMutation.mutate(post.id);
-              loadPosts();
               loadUserPosts(session?.user.id);
             }}
             data-testid="deletePost"

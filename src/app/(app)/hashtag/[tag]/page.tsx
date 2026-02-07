@@ -56,7 +56,6 @@ const HashtagPage = () => {
       });
     }
   }
-  console.log(posts);
   useEffect(() => {
     loadPostsCount();
   }, [tag]);

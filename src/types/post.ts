@@ -21,7 +21,7 @@ interface Like {
   userId: string;
 }
 
-interface Hashtag {
+export interface Hashtag {
   content: string;
   id: string;
 }
@@ -57,10 +57,30 @@ export interface PostWithUserHashtag extends PostWithUser {
 
 //infinity
 export type Cursor = { createdAt: Date; id: string } | null | undefined;
+export type SearchCursor = string | null;
 
 export type InfinityPostsResponse = {
   posts: PostWithUserHashtag[];
   nextCursor: { createdAt: Date; id: string } | null;
+  success: boolean;
+  error?: string;
+};
+
+export type searchUser = {
+  dopInfo: string;
+  id: string;
+  image: null | string;
+  name: string;
+};
+export type InfinitySearchUserResponse = {
+  users: searchUser[];
+  nextCursor: SearchCursor;
+  success: boolean;
+  error?: string;
+};
+export type InfinitySearchHashtagsResponse = {
+  hashtags: Hashtag[];
+  nextCursor: SearchCursor;
   success: boolean;
   error?: string;
 };

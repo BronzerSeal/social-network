@@ -1,16 +1,16 @@
 "use client";
 import { getAverageColor, getLightenColor } from "@/hooks/getColorsByImg";
-import { addToast, Avatar, Button, Chip, useDisclosure } from "@heroui/react";
+import { Avatar, Button, Chip, useDisclosure } from "@heroui/react";
 import { useSession } from "next-auth/react";
 import { useEffect, useState } from "react";
-import { Settings, UserRoundMinus, UserRoundPlus } from "lucide-react";
+import { Settings } from "lucide-react";
 import NewUserAvatar from "../modals/newUserAvatar.modal";
 import ChangeUserInfo from "../modals/changeUserInfo.modal";
 import { Session } from "next-auth";
-import subscribe from "@/actions/subscribe";
+import SubscribeBtn from "@/components/common/subscribeBtn";
 
 const ProfileHeader = ({ pageUser }: { pageUser: Session["user"] | null }) => {
-  const { data: session, update } = useSession();
+  const { data: session } = useSession();
   const [color, setColor] = useState("136,136,136"); // fallback
   const { isOpen, onOpen, onClose } = useDisclosure();
   const {
@@ -19,7 +19,7 @@ const ProfileHeader = ({ pageUser }: { pageUser: Session["user"] | null }) => {
     onClose: onUserInfoClose,
   } = useDisclosure();
   const subscribed = session?.user.subscriptions.some(
-    (sub) => sub === pageUser?.id
+    (sub) => sub === pageUser?.id,
   );
 
   useEffect(() => {
@@ -38,27 +38,6 @@ const ProfileHeader = ({ pageUser }: { pageUser: Session["user"] | null }) => {
     // триггерим анимацию после монтирования компонента
     setMounted(true);
   }, []);
-
-  const handleSubscribe = async () => {
-    if (!session?.user.id)
-      return addToast({
-        title: "Log in to subscribe",
-        color: "danger",
-      });
-    if (!pageUser?.id) return;
-    try {
-      const updatedUser = await subscribe(session.user.id, pageUser?.id);
-
-      if (updatedUser.code === 200) {
-        await update({ subscriptions: updatedUser.updatedUser.subscriptions });
-      }
-    } catch (error) {
-      addToast({
-        title: "Something was wrong. Try again later",
-        color: "danger",
-      });
-    }
-  };
 
   return (
     <div
@@ -120,24 +99,7 @@ const ProfileHeader = ({ pageUser }: { pageUser: Session["user"] | null }) => {
             <Settings className="transition-transform duration-300 ease-in-out group-hover:rotate-90" />
           </Button>
         ) : (
-          <Button
-            radius="lg"
-            color={`${subscribed ? "default" : "primary"}`}
-            className="h-12 cursor-pointer flex items-center justify-center "
-            onPress={handleSubscribe}
-          >
-            {subscribed ? (
-              <>
-                <p>Unsubscribe</p>
-                <UserRoundMinus />
-              </>
-            ) : (
-              <>
-                <p>Subscribe</p>
-                <UserRoundPlus />
-              </>
-            )}
-          </Button>
+          <SubscribeBtn isSubscribed={subscribed} pageUserId={pageUser?.id} />
         )}
       </div>
 

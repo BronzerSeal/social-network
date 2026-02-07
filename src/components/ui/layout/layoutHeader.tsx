@@ -26,20 +26,13 @@ export default function LayoutHeader() {
   const [searchValue, setSearchValue] = useState("");
 
   if (status === "loading") return <p>Loading...</p>;
-  // else if (status === "unauthenticated") return <p>Unauthenticated</p>;
 
   const changeSearchValue = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchValue(e.target.value);
   };
   const handleSearchValue = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    const search = async (something: string) => {
-      addToast({
-        title: something,
-        color: "success",
-      });
-    };
     if (e.key === "Enter") {
-      search(searchValue);
+      router.push(`/search?q=${searchValue}`);
       setSearchValue("");
     }
   };

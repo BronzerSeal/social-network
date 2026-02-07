@@ -35,8 +35,6 @@ const UserPage = () => {
     }
   }, [userId]);
 
-  console.log(posts);
-
   return (
     <div className="py-2">
       {error.length > 0 ? (

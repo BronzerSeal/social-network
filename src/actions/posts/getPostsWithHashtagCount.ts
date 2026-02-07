@@ -13,7 +13,6 @@ export async function getPostsWithHashtagCount(hashtag: string) {
         },
       },
     });
-    console.log("resp", response);
     return {
       success: true,
       count: response,
