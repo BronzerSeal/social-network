@@ -32,7 +32,7 @@ const HashtagPage = () => {
     readonly unknown[],
     Cursor
   >({
-    queryKey: ["posts", "hashtag-posts", tag],
+    queryKey: ["posts", "hashtag-posts"],
     queryFn: ({ pageParam }) =>
       getInfinityPostsByHashtag({
         hashtag: `#${tag}`,
